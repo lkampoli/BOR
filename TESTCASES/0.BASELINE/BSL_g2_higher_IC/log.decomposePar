@@ -1,0 +1,152 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : decomposePar -latestTime
+Date   : Feb 01 2023
+Time   : 11:15:42
+Host   : "spartan-bm121.hpc.unimelb.edu.au"
+PID    : 38670
+I/O    : uncollated
+Case   : /data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod hierarchical
+
+Finished decomposition in 0.03 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 3410
+    Number of faces shared with processor 1 = 98
+    Number of processor patches = 1
+    Number of processor faces = 98
+    Number of boundary faces = 6952
+
+Processor 1
+    Number of cells = 3410
+    Number of faces shared with processor 0 = 98
+    Number of faces shared with processor 2 = 98
+    Number of processor patches = 2
+    Number of processor faces = 196
+    Number of boundary faces = 6870
+
+Processor 2
+    Number of cells = 3410
+    Number of faces shared with processor 1 = 98
+    Number of faces shared with processor 3 = 96
+    Number of processor patches = 2
+    Number of processor faces = 194
+    Number of boundary faces = 6892
+
+Processor 3
+    Number of cells = 3410
+    Number of faces shared with processor 2 = 96
+    Number of faces shared with processor 4 = 96
+    Number of processor patches = 2
+    Number of processor faces = 192
+    Number of boundary faces = 6892
+
+Processor 4
+    Number of cells = 3410
+    Number of faces shared with processor 3 = 96
+    Number of faces shared with processor 5 = 96
+    Number of processor patches = 2
+    Number of processor faces = 192
+    Number of boundary faces = 6892
+
+Processor 5
+    Number of cells = 3410
+    Number of faces shared with processor 4 = 96
+    Number of faces shared with processor 6 = 97
+    Number of processor patches = 2
+    Number of processor faces = 193
+    Number of boundary faces = 6893
+
+Processor 6
+    Number of cells = 3410
+    Number of faces shared with processor 5 = 97
+    Number of faces shared with processor 7 = 96
+    Number of processor patches = 2
+    Number of processor faces = 193
+    Number of boundary faces = 6885
+
+Processor 7
+    Number of cells = 3410
+    Number of faces shared with processor 6 = 96
+    Number of faces shared with processor 8 = 96
+    Number of processor patches = 2
+    Number of processor faces = 192
+    Number of boundary faces = 6856
+
+Processor 8
+    Number of cells = 3410
+    Number of faces shared with processor 7 = 96
+    Number of faces shared with processor 9 = 96
+    Number of processor patches = 2
+    Number of processor faces = 192
+    Number of boundary faces = 6856
+
+Processor 9
+    Number of cells = 3415
+    Number of faces shared with processor 8 = 96
+    Number of processor patches = 1
+    Number of processor faces = 96
+    Number of boundary faces = 6961
+
+Number of processor faces = 869
+Max number of cells = 3415 (0.1319454625% above average 3410.5)
+Max number of processor patches = 2 (11.11111111% above average 1.8)
+Max number of faces between processors = 196 (12.77330265% above average 173.8)
+
+Time = 9000
+
+Processor 0: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 1: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 2: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 3: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 4: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 5: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 6: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 7: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 8: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+Processor 9: field transfer
+Detected additional non-decomposed files in "/data/scratch/projects/punim0394/BOR/0.BASELINE/BSL_g2_higher_IC/9000/uniform"
+
+End
+
