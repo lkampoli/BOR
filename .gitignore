@@ -1,2 +1,2 @@
-*.log.*
+log.simpleFoam
 *.pkl
