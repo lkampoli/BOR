@@ -1,0 +1,737 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// NOTE OF6 setting
+type sets;
+type surfaces;
+libs ("libsampling.so");
+
+setFormat raw;
+//surlineFaceFormat vtk;
+surfaceFormat   raw;
+//surfaceFormat   vtk;
+
+formatOptions
+{
+    ensight
+    {
+        format  ascii;
+    }
+}
+
+interpolationScheme cellPoint;
+
+fields
+(
+//wallShearStress
+//strainRate
+//shearStress
+U
+//R
+turbulenceProperties:R
+k
+//wallGradU
+p
+omega
+nut
+//T1
+//T2
+//T3
+//T4
+//T5
+//T6
+//T7
+//T8
+//T9
+//T10
+//B1
+//B2
+//B3
+//B4
+//B5
+//B6
+//B7
+//B8
+//B9
+//B10
+//B11
+//B12
+//B13
+//B14
+//B15
+//B16
+//B17
+//B18
+//B19
+//B20
+//B20
+//B21
+//B22
+//B23
+//B24
+//B25
+//B26
+//B27
+//B28
+//B29
+//B30
+//B31
+//B32
+//B33
+//B34
+//B35
+//B36
+//B37
+//B38
+//B39
+//B40
+//B41
+//B42
+//B43
+//B44
+//B45
+//B46
+//B47
+//I1_1
+//I1_2
+//I1_3
+//I1_4
+//I1_5
+//I1_6
+//I1_7
+//I1_8
+//I1_9
+//I1_10
+//I1_11
+//I1_12
+//I1_13
+//I1_14
+//I1_15
+//I1_16
+//I1_17
+//I1_18
+//I1_19
+//I1_20
+//I1_20
+//I1_21
+//I1_22
+//I1_23
+//I1_24
+//I1_25
+//I1_26
+//I1_27
+//I1_28
+//I1_29
+//I1_30
+//I1_31
+//I1_32
+//I1_33
+//I1_34
+//I1_35
+//I1_36
+//I1_37
+//I1_38
+//I1_39
+//I1_40
+//I1_41
+//I1_42
+//I1_43
+//I1_44
+//I1_45
+//I1_46
+//I1_47
+//I2_1
+//I2_2
+//I2_3
+//I2_4
+//I2_5
+//I2_6
+//I2_7
+//I2_8
+//I2_9
+//I2_10
+//I2_11
+//I2_12
+//I2_13
+//I2_14
+//I2_15
+//I2_16
+//I2_17
+//I2_18
+//I2_19
+//I2_20
+//I2_21
+//I2_22
+//I2_23
+//I2_24
+//I2_25
+//I2_26
+//I2_27
+//I2_28
+//I2_29
+//I2_30
+//I2_31
+//I2_32
+//I2_33
+//I2_34
+//I2_35
+//I2_36
+//I2_37
+//I2_38
+//I2_39
+//I2_40
+//I2_41
+//I2_42
+//I2_43
+//I2_44
+//I2_45
+//I2_46
+//I2_47
+//I3_1
+//I3_2
+//I3_3
+//I3_4
+//I3_5
+//I3_6
+//I3_7
+//I3_8
+//I3_9
+//I3_10
+//I3_11
+//I3_12
+//I3_13
+//I3_14
+//I3_15
+//I3_16
+//I3_17
+//I3_18
+//I3_19
+//I3_20
+//I3_21
+//I3_22
+//I3_23
+//I3_24
+//I3_25
+//I3_26
+//I3_27
+//I3_28
+//I3_29
+//I3_30
+//I3_31
+//I3_32
+//I3_33
+//I3_34
+//I3_35
+//I3_36
+//I3_37
+//I3_38
+//I3_39
+//I3_40
+//I3_41
+//I3_42
+//I3_43
+//I3_44
+//I3_45
+//I3_46
+//I3_47
+//q1
+//q2
+//q3
+//q4
+//S
+//Shat
+//Rhat
+//R
+//T_t
+//T_k
+//lambda1
+//lambda2
+//lambda3
+//lambda4
+//lambda5
+gradp
+gradk
+gradU
+//Ap
+//Ak
+//Aphat
+//Akhat
+//epsilon
+DUDt
+//wallDistance
+);
+
+
+sets
+(
+    // BOW
+    XoRm0.1
+    {
+        //type    lineUniform;
+        //axis    distance;
+        //start   (10.001 -1 0.01);
+        //end     (10.001 1 0.01);
+        //nPoints 100;
+
+        type        lineFace; //lineUniform; //lineFace;
+        axis        y;
+
+        start       (-0.1  0.0 0); //
+        end         (-0.1  1. 0); // 
+        //nPoints     100;
+    }
+ 
+    XoR0.0
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.  0.0 0); //
+        end         (0.  1. 0); // 
+    }
+    XoRp0.1
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.1  0.0 0); //
+        end         (0.1  1. 0); // 
+    }
+    XoRp0.2
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.2  0.0 0); //
+        end         (0.2  1. 0); // 
+    }
+    XoRp0.3
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.3  0.0 0); //
+        end         (0.3  1. 0); // 
+    }
+    XoRp0.4
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.4  0.0 0); //
+        end         (0.4  1. 0); // 
+    }
+    XoRp0.5
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.5  0.0 0); //
+        end         (0.5  1. 0); // 
+    }
+    XoRp0.6
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.6  0.0 0); //
+        end         (0.6  1. 0); // 
+    }
+    XoRp0.7
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.7  0.0 0); //
+        end         (0.7  1. 0); // 
+    }
+    XoRp0.8
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.8  0.0 0); //
+        end         (0.8  1. 0); // 
+    }
+    XoRp0.9
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (0.9  0.0 0); //
+        end         (0.9  1. 0); // 
+    }
+    XoRp1.0
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (1.0  0.0 0); //
+        end         (1.0  1. 0); // 
+    }
+    XoRp1.1
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (1.1  0.0 0); //
+        end         (1.1  1. 0); // 
+    }
+    // CENTER
+    XoRp4.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (4.17 0.0 0.0); //
+        end         (4.17 1.0 0.0); // 
+    }
+    XoRp4.37
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (4.37 0.0 0.0); //
+        end         (4.37 1.0 0.0); // 
+    }
+    XoRp4.57
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (4.57 0.0 0.0); //
+        end         (4.57 1.0 0.0); // 
+    }
+    XoRp4.77
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (4.77 0.0 0.0); //
+        end         (4.77 1.0 0.0); // 
+    }
+    XoRp4.97
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (4.97 0.0 0.0); //
+        end         (4.97 1.0 0.0); // 
+    }
+    XoRp5.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (5.17 0.0 0.0); //
+        end         (5.17 1.0 0.0); // 
+    }
+    XoRp5.37
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (5.37 0.0 0.0); //
+        end         (5.37 1.0 0.0); // 
+    }
+    // STERN
+    XoRp8.67
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (8.67 0.0 0.0); //
+        end         (8.67 1.0 0.0); // 
+    }
+    XoRp8.92
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (8.92 0.0 0.0); //
+        end         (8.92 1.0 0.0); // 
+    }
+    XoRp9.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (9.17 0.0 0.0); //
+        end         (9.17 1.0 0.0); // 
+    }
+    XoRp9.42
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (9.42 0.0 0.0); //
+        end         (9.42 1.0 0.0); // 
+    }
+    XoRp9.67
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (9.67 0.0 0.0); //
+        end         (9.67 1.0 0.0); // 
+    }
+    XoRp9.92
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (9.92 0.0 0.0); //
+        end         (9.92 1.0 0.0); // 
+    }
+    XoRp10.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (10.17 0.0 0.0); //
+        end         (10.17 1.0 0.0); // 
+    }
+    XoRp10.42
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (10.42 0.0 0.0); //
+        end         (10.42 1.0 0.0); // 
+    }   
+    XoRp10.67
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (10.67 0.0 0.0); //
+        end         (10.67 1.0 0.0); // 
+    }
+    XoRp10.92
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (10.92 0.0 0.0); //
+        end         (10.92 1.0 0.0); // 
+    }
+    XoRp11.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (11.17 0.0 0.0); //
+        end         (11.17 1.0 0.0); // 
+    }
+    XoRp11.42
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (11.42 0.0 0.0); //
+        end         (11.42 1.0 0.0); // 
+    }
+    XoRp11.67
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (11.67 0.0 0.0); //
+        end         (11.67 1.0 0.0); // 
+    }
+    XoRp11.92
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (11.92 0.0 0.0); //
+        end         (11.92 1.0 0.0); // 
+    }
+    XoRp12.17
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (12.17 0.0 0.0); //
+        end         (12.17 1.0 0.0); // 
+    }
+    // WAKE
+    XoRp12.9167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (12.9167 0.0 0.0); //
+        end         (12.9167 1.0 0.0); // 
+    }
+    XoRp13.4167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (13.4167 0.0 0.0); //
+        end         (13.4167 1.0 0.0); // 
+    }
+    XoRp13.9167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (13.9167 0.0 0.0); //
+        end         (13.9167 1.0 0.0); // 
+    }
+    XoRp14.4167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (14.4167 0.0 0.0); //
+        end         (14.4167 1.0 0.0); // 
+    }
+    XoRp14.9167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (14.9167 0.0 0.0); //
+        end         (14.9167 1.0 0.0); // 
+    }
+    XoRp15.4167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (15.4167 0.0 0.0); //
+        end         (15.4167 1.0 0.0); // 
+    }
+    XoRp15.9167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (15.9167 0.0 0.0); //
+        end         (15.9167 1.0 0.0); // 
+    }
+    XoRp16.4167
+    {
+        type        lineFace;
+        axis        y;
+
+        start       (16.4167 0.0 0.0); //
+        end         (16.4167 1.0 0.0); // 
+    }
+//    bow
+//    {
+//        type points;
+//        ordered true;
+//        axis xyz;
+//
+//        points (
+//                #include "bow.H"
+//        );
+//    interpolate true;
+//    }
+//    center_body
+//    {
+//        type points;
+//        ordered true;
+//        axis xyz;
+//
+//        points (
+//                #include "center_body.H"
+//        );
+//    interpolate true;
+//    }
+//    stern
+//    {
+//        type points;
+//        ordered true;
+//        axis xyz;
+//
+//        points (
+//                #include "stern.H"
+//        );
+//    interpolate true;
+//    }
+//    wake
+//    {
+//        type points;
+//        ordered true;
+//        axis xyz;
+//
+//        points (
+//                #include "wake.H"
+//        );
+//    interpolate true;
+//    }
+
+);
+
+surfaces (
+    BoR
+    {
+        type            patch;
+        patches         (BoR);
+        interpolate true;
+        triangulate false;
+    }
+Z_0_Plane
+        {
+            type                cuttingPlane;
+            planeType           pointAndNormal;
+            pointAndNormalDict
+            {
+                basePoint       (0 0 0);  // Notet that the plane does not match up with the mesh
+                normalVector    (0 0 1);
+            }
+            interpolate         true;
+        }
+X_0_Plane
+        {
+            type                cuttingPlane;
+            planeType           pointAndNormal;
+            pointAndNormalDict
+            {
+                basePoint       (0 0 0);  
+                normalVector    (1 0 0);
+            }
+            interpolate         true;
+        }
+Y_0_Plane
+        {
+            type                cuttingPlane;
+            planeType           pointAndNormal;
+            pointAndNormalDict
+            {
+                basePoint       (0 0 0); 
+                normalVector    (0 1 0);
+            }
+            interpolate         true;
+        }
+//Z_0p25h_Plane
+//        {
+//            type                cuttingPlane;
+//            planeType           pointAndNormal;
+//            pointAndNormalDict
+//            {
+//                basePoint       (0 0 0.25);  // Notet that the plane does not match up with the mesh
+//                normalVector    (0 0 1);
+//            }
+//            interpolate         true;
+//        }
+);
+
+// *********************************************************************** //

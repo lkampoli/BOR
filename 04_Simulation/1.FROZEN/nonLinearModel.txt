@@ -1,0 +1,39 @@
+1  ++ Tr.R.BFS.region.a5.k_froz_omega_froz_no-limiters
+2  ++ Tr.aijx.RijHat.BFS.region.a5.newfrozenAppr (ON/OFF, ON/ON, OFF/ON)
+3  ++ Tr.aijx.squCyl.region_Ha5_newfrozenaijxRij_hat.eve
+4  ++ Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.eve
+5  x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr
+6  +| Tr.aijx.squCyl.region_Ha5_newfrozenaijxRij_hat.2.eve
+7  ++ Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.2.eve
+7b ++ Tr.aijx.squCyl.region_Ha5_newfrozenaijxRij_hat.3.eve
+8  ++ Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.3.eve
+9  ++ Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.4.eve
+10 +  Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.5.eve
+11 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.b
+12 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.c
+13 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.d
+14 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.e
+15 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.f
+16 +| Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.b.cube (default)
+17 ++ Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.f.cube (ON/OFF, ON/ON, OFF/ON)
+18 x  Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.b.No2.SFS2
+19 ++ Tr.aijx_RijHat_PH_EVE-MO-11 (ON/OFF, ON/ON, OFF/ON)
+20 ++ Tr.aijx_RijHat_PH_EVE-MO-57 (ON/OFF, ON/ON, OFF/ON)
+21 ++ Tr.aij.sqcyl.SNH2020-Reg-B
+22 ++ Chitrarth_Lav
+23 ++ YuanFang_FlatPlate
+24 ++ YuanFang_ChannelFlow
+25 ++ YuanFang_JetFlow
+26 ++ YuanFang_HumpFlow
+27 - XiaoWei_FreeJet
+28 - XiaoWei_WallJet
+29 - XiaoWei_Stagnation
+__________________________
+ Legenda:
+ -  not run
+ -- not implemented
+ +  run
+ ++ restart run
+ +| no need to restart (convergence reached)
+ x  dependent on geometrical switches (not run)
+

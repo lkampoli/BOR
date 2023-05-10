@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      RASProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType RASModel;
+
+    RASModel             kOmegaSSTGEP_Rijhat_added;
+
+    turbulence          on;
+
+    printCoeffs         on;
+
+    kOmegaSSTGEP_Rijhat_addedCoeffs
+    {
+        model       Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.b.cube;
+        aijx_term   "1.0"; // 2.0 ON and 1.0 OFF
+        Rterm_corr  "2.0";
+
+/*
+        alphaK1         1.1; //0.85;
+        alphaK2         1.1; //1;
+        alphaOmega1     0.53; // 0.5;
+        alphaOmega2     1.0; //0.856;
+        gamma1          0.518; //0.55555556;
+        gamma2          0.44;
+        beta1           0.0747; //0.075;
+        beta2           0.0828;
+        betaStar        0.09;
+        a1              0.31;
+        b1              1;
+        c1              10;
+*/
+
+    }
+
+// ************************************************************************* //
+
