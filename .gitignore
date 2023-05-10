@@ -1,2 +1,4 @@
 log.simpleFoam
+log.*
+slurm-*
 *.pkl
