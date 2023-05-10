@@ -1,0 +1,49 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : sample
+Date   : Apr 22 2023
+Time   : 03:06:44
+Host   : "spartan-bm119.hpc.unimelb.edu.au"
+PID    : 61596
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_BOW_UVRxy_pop100_gen100/running_pfac150_pop100_seed0/run_02262/PH_2D_RANS_kOmegaSSTx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading set description:
+    XoR-0.1
+    XoR0.0
+    XoR0.1
+    XoR0.2
+    XoR0.3
+    XoR0.4
+    XoR0.5
+    XoR0.6
+    XoR0.7
+    XoR0.8
+    XoR0.9
+    XoR1.0
+    XoR1.1
+
+Time = 0
+--> FOAM Warning : 
+    From function sampledSets::classifyFields()
+    in file sampledSet/sampledSets/sampledSetsGrouping.C at line 109
+    Cannot find field file matching R
+
+Time = 2000
+
+End
+

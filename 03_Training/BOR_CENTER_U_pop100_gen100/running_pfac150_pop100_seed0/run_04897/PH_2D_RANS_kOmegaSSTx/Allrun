@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Load OpenFOAM v2.4
+source /usr/local/module/spartan_old.sh
+module load OpenFOAM/2.4.0-intel-2017.u2
+source $FOAM_BASH
+
+# Add library path
+export LD_LIBRARY_PATH=/scratch/punim0394/PERIODICHILL/02_Training/OpenFOAM/lib:$LD_LIBRARY_PATH
+
+# Decompose case
+decomposePar > log.decomposePar
+
+# Launch OpenFOAM solver
+mpirun -np 4 /scratch/punim0394/PERIODICHILL/02_Training/OpenFOAM/bin/simpleFoamx -parallel > log.simpleFoamx
+
+# Reconstruct case
+reconstructPar > log.reconstructPar
+
+# change OF version: OpenFOAM/2.4.0-intel-2017.u2 -> OpenFOAM-5.0-20180108
+#module purge
+#module load openfoam/5.0-20180108
+
+## create fix_R_2000.sh on the fly
+#with open ('fix_R_2000.sh', 'w') as rsh:
+#    rsh.write('''\
+#        #! /bin/bash
+#    sed -i 's/mapMethod/mapMethod       planarInterpolation/g' BOR/2000/R
+#    ''')
+#
+#    # execute it 
+#    print("start fix_R_2000")
+#    subprocess.run(['chmod', '+x', 'fix_R_2000.sh'])
+#    subprocess.call("./fix_R_2000.sh", shell=True)
+#    print("end fix_R_2000")
+
+# Postprocessing
+sample > log.sample
+
+# Remove multi-processing folders
+rm -r processor*

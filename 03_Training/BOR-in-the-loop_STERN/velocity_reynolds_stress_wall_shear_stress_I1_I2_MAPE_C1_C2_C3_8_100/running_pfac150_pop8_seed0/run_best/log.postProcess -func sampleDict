@@ -1,0 +1,257 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : postProcess -func sampleDict -latestTime -case ./BOR
+Date   : Nov 22 2022
+Time   : 00:52:08
+Host   : "spartan-bm022.hpc.unimelb.edu.au"
+PID    : 236276
+I/O    : uncollated
+Case   : ./BOR
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 2000
+
+--> FOAM Warning : 
+    From function void Foam::particle::locate(const vector&, Foam::label, bool, Foam::string)
+    in file particle/particle.C at line 495
+    Particle initialised with a location outside of the mesh.
+--> FOAM Warning : 
+    From function void Foam::particle::locate(const vector&, Foam::label, bool, Foam::string)
+    in file particle/particle.C at line 495
+    Particle initialised with a location outside of the mesh.
+Reading set description:
+    frozen
+    frozen_BOW
+    frozen_CENTER
+    frozen_STERN
+    frozen_WAKE
+    XoRm0.1
+    XoR0.0
+    XoRp0.1
+    XoRp0.2
+    XoRp0.3
+    XoRp0.4
+    XoRp0.5
+    XoRp0.6
+    XoRp0.7
+    XoRp0.8
+    XoRp0.9
+    XoRp1.0
+    XoRp1.1
+    XoRp4.17
+    XoRp4.27
+    XoRp4.37
+    XoRp4.47
+    XoRp4.57
+    XoRp4.67
+    XoRp4.77
+    XoRp4.87
+    XoRp4.97
+    XoRp5.07
+    XoRp5.17
+    XoRp5.27
+    XoRp5.37
+    XoRp5.47
+    XoRp8.67
+    XoRp8.92
+    XoRp9.17
+    XoRp9.42
+    XoRp9.67
+    XoRp9.92
+    XoRp10.17
+    XoRp10.42
+    XoRp10.67
+    XoRp10.92
+    XoRp11.17
+    XoRp11.42
+    XoRp11.67
+    XoRp11.92
+    XoRp12.17
+    XoRp12.9167
+    XoRp13.17
+    XoRp13.4167
+    XoRp13.67
+    XoRp13.9167
+    XoRp14.17
+    XoRp14.4167
+    XoRp14.67
+    XoRp14.9167
+    XoRp15.17
+    XoRp15.4167
+    XoRp15.67
+    XoRp15.9167
+    XoRp16.17
+    XoRp16.4167
+
+Time = 2000
+
+Reading fields:
+    volVectorFields: U
+    volSymmTensorFields: R
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta2.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta2.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta3.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta3.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta4.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta4.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta6.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta6.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta5.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta5.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::readHeader(Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 88
+    Reading "./BOR/constant/zeta1.H" at line 1
+    First token could not be read or is not the keyword 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      zeta1.H;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+Executing functionObjects
+
+End
+

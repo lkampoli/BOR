@@ -1,0 +1,90 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : simpleFoam -postProcess -func R -case ./BOR
+Date   : Jan 14 2023
+Time   : 00:04:41
+Host   : "spartan-bm054.hpc.unimelb.edu.au"
+PID    : 157130
+I/O    : uncollated
+Case   : ./BOR
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-08
+        U: tolerance 1e-08
+        "(k|epsilon|R|omega)": tolerance 1e-08
+
+Time = 0
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST_BOR_InDaLoop_R
+Selecting patchDistMethod meshWave
+bounding k, min: 0 max: 0.025229992 average: 0.0062544658
+Reading tensor expression from GEP 
+
+Tensor expression of nonlinearStress being run: 
+(((I1 + 0.089) - (-1.0 + I2))) * T1 + (((I1 - I2) - ((2.0 + (0.205 + 0.097)) - -1.0))) * T2 + ((((I1 + ((-1.0 + -0.15) + 1.0)) * (2.0 - I1)) + ((((0.205 - 0.089) + 0.089) + (I1 - 1.0)) + (0.097 + I1)))) * T3 
+
+Tensor expression of Rij being run: 
+(EXPR03) * T1 + (EXPR04) * T2 + (EXPR05) * T3 
+
+No MRF models present
+
+No finite volume options present
+turbulenceFields R: storing fields:
+    "R"
+
+    functionObjects::turbulenceFields R writing field: R
+
+Time = 2000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST_BOR_InDaLoop_R
+Selecting patchDistMethod meshWave
+bounding k, min: 0 max: 0.021597008 average: 0.0026850522
+bounding omega, min: 2.220446e-16 max: 4.5183752e+13 average: 5.7444491e+09
+Reading tensor expression from GEP 
+
+Tensor expression of nonlinearStress being run: 
+(((I1 + 0.089) - (-1.0 + I2))) * T1 + (((I1 - I2) - ((2.0 + (0.205 + 0.097)) - -1.0))) * T2 + ((((I1 + ((-1.0 + -0.15) + 1.0)) * (2.0 - I1)) + ((((0.205 - 0.089) + 0.089) + (I1 - 1.0)) + (0.097 + I1)))) * T3 
+
+Tensor expression of Rij being run: 
+(EXPR03) * T1 + (EXPR04) * T2 + (EXPR05) * T3 
+
+No MRF models present
+
+No finite volume options present
+turbulenceFields R: storing fields:
+    "R"
+
+    functionObjects::turbulenceFields R writing field: R
+
+End
+

@@ -1,0 +1,2138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+libs ("libsampling.so");
+
+type sets;
+
+setFormat raw; //csv
+
+formatOptions
+{
+    ensight
+    {
+        format  ascii;
+    }
+}
+
+interpolationScheme cellPoint;
+
+fields (U R);
+
+sets
+(
+    // BOW
+    cluster0_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_-0.1.H" );
+    }
+    cluster0_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.0.H" );
+    }
+    cluster0_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.1.H" );
+    }
+    cluster0_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.2.H" );
+    }
+    cluster0_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.3.H" );
+    }
+    cluster0_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.4.H" );
+    }
+    cluster0_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.5.H" );
+    }
+    cluster0_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.6.H" );
+    }
+    cluster0_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.7.H" );
+    }
+    cluster0_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.8.H" );
+    }
+    cluster0_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_0.9.H" );
+    }
+    cluster0_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_1.0.H" );
+    }
+    cluster0_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster0_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.17.H" );
+    }
+    cluster0_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.27.H" );
+    }
+    cluster0_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.37.H" );
+    }
+    cluster0_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.47.H" );
+    }
+    cluster0_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.57.H" );
+    }
+    cluster0_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.67.H" );
+    }
+    cluster0_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.77.H" );
+    }
+    cluster0_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.87.H" );
+    }
+    cluster0_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_4.97.H" );
+    }
+    cluster0_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_5.07.H" );
+    }
+    cluster0_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_5.17.H" );
+    }
+    cluster0_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_5.27.H" );
+    }
+    cluster0_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_5.37.H" );
+    }
+    cluster0_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster0_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_8.67.H" );
+    }
+    cluster0_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_8.92.H" );
+    }
+    cluster0_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_9.17.H" );
+    }
+    cluster0_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_9.42.H" );
+    }
+    cluster0_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_9.67.H" );
+    }
+    cluster0_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_9.92.H" );
+    }
+    cluster0_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_10.17.H" );
+    }
+    cluster0_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_10.42.H" );
+    }
+    cluster0_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_10.67.H" );
+    }
+    cluster0_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_10.92.H" );
+    }
+    cluster0_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_11.17.H" );
+    }
+    cluster0_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_11.42.H" );
+    }
+    cluster0_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_11.67.H" );
+    }
+    cluster0_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_11.92.H" );
+    }
+    cluster0_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster0_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_12.9167.H" );
+    }
+    cluster0_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_13.17.H" );
+    }
+    cluster0_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_13.4167.H" );
+    }
+    cluster0_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_13.67.H" );
+    }
+    cluster0_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_13.9167.H" );
+    }
+    cluster0_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_14.17.H" );
+    }
+    cluster0_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_14.4167.H" );
+    }
+    cluster0_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_14.67.H" );
+    }
+    cluster0_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_14.9167.H" );
+    }
+    cluster0_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_15.17.H" );
+    }
+    cluster0_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_15.4167.H" );
+    }
+    cluster0_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_15.67.H" );
+    }
+    cluster0_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_15.9167.H" );
+    }
+    cluster0_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_16.17.H" );
+    }
+    cluster0_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster0/cluster0_XoR_16.4167.H" );
+    }
+
+    // BOW
+    cluster1_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_-0.1.H" );
+    }
+    cluster1_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.0.H" );
+    }
+    cluster1_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.1.H" );
+    }
+    cluster1_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.2.H" );
+    }
+    cluster1_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.3.H" );
+    }
+    cluster1_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.4.H" );
+    }
+    cluster1_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.5.H" );
+    }
+    cluster1_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.6.H" );
+    }
+    cluster1_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.7.H" );
+    }
+    cluster1_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.8.H" );
+    }
+    cluster1_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_0.9.H" );
+    }
+    cluster1_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_1.0.H" );
+    }
+    cluster1_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster1_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.17.H" );
+    }
+    cluster1_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.27.H" );
+    }
+    cluster1_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.37.H" );
+    }
+    cluster1_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.47.H" );
+    }
+    cluster1_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.57.H" );
+    }
+    cluster1_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.67.H" );
+    }
+    cluster1_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.77.H" );
+    }
+    cluster1_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.87.H" );
+    }
+    cluster1_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_4.97.H" );
+    }
+    cluster1_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_5.07.H" );
+    }
+    cluster1_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_5.17.H" );
+    }
+    cluster1_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_5.27.H" );
+    }
+    cluster1_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_5.37.H" );
+    }
+    cluster1_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster1_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_8.67.H" );
+    }
+    cluster1_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_8.92.H" );
+    }
+    cluster1_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_9.17.H" );
+    }
+    cluster1_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_9.42.H" );
+    }
+    cluster1_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_9.67.H" );
+    }
+    cluster1_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_9.92.H" );
+    }
+    cluster1_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_10.17.H" );
+    }
+    cluster1_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_10.42.H" );
+    }
+    cluster1_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_10.67.H" );
+    }
+    cluster1_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_10.92.H" );
+    }
+    cluster1_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_11.17.H" );
+    }
+    cluster1_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_11.42.H" );
+    }
+    cluster1_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_11.67.H" );
+    }
+    cluster1_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_11.92.H" );
+    }
+    cluster1_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster1_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_12.9167.H" );
+    }
+    cluster1_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_13.17.H" );
+    }
+    cluster1_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_13.4167.H" );
+    }
+    cluster1_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_13.67.H" );
+    }
+    cluster1_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_13.9167.H" );
+    }
+    cluster1_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_14.17.H" );
+    }
+    cluster1_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_14.4167.H" );
+    }
+    cluster1_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_14.67.H" );
+    }
+    cluster1_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_14.9167.H" );
+    }
+    cluster1_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_15.17.H" );
+    }
+    cluster1_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_15.4167.H" );
+    }
+    cluster1_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_15.67.H" );
+    }
+    cluster1_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_15.9167.H" );
+    }
+    cluster1_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_16.17.H" );
+    }
+    cluster1_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster1/cluster1_XoR_16.4167.H" );
+    }
+
+    // BOW
+    cluster2_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_-0.1.H" );
+    }
+    cluster2_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.0.H" );
+    }
+    cluster2_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.1.H" );
+    }
+    cluster2_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.2.H" );
+    }
+    cluster2_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.3.H" );
+    }
+    cluster2_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.4.H" );
+    }
+    cluster2_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.5.H" );
+    }
+    cluster2_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.6.H" );
+    }
+    cluster2_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.7.H" );
+    }
+    cluster2_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.8.H" );
+    }
+    cluster2_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_0.9.H" );
+    }
+    cluster2_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_1.0.H" );
+    }
+    cluster2_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster2_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.17.H" );
+    }
+    cluster2_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.27.H" );
+    }
+    cluster2_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.37.H" );
+    }
+    cluster2_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.47.H" );
+    }
+    cluster2_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.57.H" );
+    }
+    cluster2_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.67.H" );
+    }
+    cluster2_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.77.H" );
+    }
+    cluster2_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.87.H" );
+    }
+    cluster2_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_4.97.H" );
+    }
+    cluster2_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_5.07.H" );
+    }
+    cluster2_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_5.17.H" );
+    }
+    cluster2_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_5.27.H" );
+    }
+    cluster2_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_5.37.H" );
+    }
+    cluster2_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster2_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_8.67.H" );
+    }
+    cluster2_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_8.92.H" );
+    }
+    cluster2_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_9.17.H" );
+    }
+    cluster2_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_9.42.H" );
+    }
+    cluster2_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_9.67.H" );
+    }
+    cluster2_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_9.92.H" );
+    }
+    cluster2_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_10.17.H" );
+    }
+    cluster2_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_10.42.H" );
+    }
+    cluster2_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_10.67.H" );
+    }
+    cluster2_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_10.92.H" );
+    }
+    cluster2_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_11.17.H" );
+    }
+    cluster2_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_11.42.H" );
+    }
+    cluster2_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_11.67.H" );
+    }
+    cluster2_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_11.92.H" );
+    }
+    cluster2_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster2_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_12.9167.H" );
+    }
+    cluster2_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_13.17.H" );
+    }
+    cluster2_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_13.4167.H" );
+    }
+    cluster2_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_13.67.H" );
+    }
+    cluster2_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_13.9167.H" );
+    }
+    cluster2_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_14.17.H" );
+    }
+    cluster2_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_14.4167.H" );
+    }
+    cluster2_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_14.67.H" );
+    }
+    cluster2_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_14.9167.H" );
+    }
+    cluster2_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_15.17.H" );
+    }
+    cluster2_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_15.4167.H" );
+    }
+    cluster2_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_15.67.H" );
+    }
+    cluster2_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_15.9167.H" );
+    }
+    cluster2_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_16.17.H" );
+    }
+    cluster2_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster2/cluster2_XoR_16.4167.H" );
+    }
+
+    // BOW
+    cluster3_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_-0.1.H" );
+    }
+    cluster3_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.0.H" );
+    }
+    cluster3_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.1.H" );
+    }
+    cluster3_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.2.H" );
+    }
+    cluster3_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.3.H" );
+    }
+    cluster3_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.4.H" );
+    }
+    cluster3_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.5.H" );
+    }
+    cluster3_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.6.H" );
+    }
+    cluster3_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.7.H" );
+    }
+    cluster3_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.8.H" );
+    }
+    cluster3_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_0.9.H" );
+    }
+    cluster3_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_1.0.H" );
+    }
+    cluster3_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster3_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.17.H" );
+    }
+    cluster3_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.27.H" );
+    }
+    cluster3_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.37.H" );
+    }
+    cluster3_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.47.H" );
+    }
+    cluster3_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.57.H" );
+    }
+    cluster3_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.67.H" );
+    }
+    cluster3_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.77.H" );
+    }
+    cluster3_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.87.H" );
+    }
+    cluster3_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_4.97.H" );
+    }
+    cluster3_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_5.07.H" );
+    }
+    cluster3_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_5.17.H" );
+    }
+    cluster3_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_5.27.H" );
+    }
+    cluster3_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_5.37.H" );
+    }
+    cluster3_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster3_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_8.67.H" );
+    }
+    cluster3_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_8.92.H" );
+    }
+    cluster3_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_9.17.H" );
+    }
+    cluster3_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_9.42.H" );
+    }
+    cluster3_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_9.67.H" );
+    }
+    cluster3_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_9.92.H" );
+    }
+    cluster3_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_10.17.H" );
+    }
+    cluster3_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_10.42.H" );
+    }
+    cluster3_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_10.67.H" );
+    }
+    cluster3_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_10.92.H" );
+    }
+    cluster3_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_11.17.H" );
+    }
+    cluster3_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_11.42.H" );
+    }
+    cluster3_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_11.67.H" );
+    }
+    cluster3_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_11.92.H" );
+    }
+    cluster3_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster3_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_12.9167.H" );
+    }
+    cluster3_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_13.17.H" );
+    }
+    cluster3_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_13.4167.H" );
+    }
+    cluster3_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_13.67.H" );
+    }
+    cluster3_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_13.9167.H" );
+    }
+    cluster3_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_14.17.H" );
+    }
+    cluster3_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_14.4167.H" );
+    }
+    cluster3_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_14.67.H" );
+    }
+    cluster3_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_14.9167.H" );
+    }
+    cluster3_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_15.17.H" );
+    }
+    cluster3_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_15.4167.H" );
+    }
+    cluster3_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_15.67.H" );
+    }
+    cluster3_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_15.9167.H" );
+    }
+    cluster3_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_16.17.H" );
+    }
+    cluster3_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster3/cluster3_XoR_16.4167.H" );
+    }
+
+    // BOW
+    cluster4_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_-0.1.H" );
+    }
+    cluster4_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.0.H" );
+    }
+    cluster4_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.1.H" );
+    }
+    cluster4_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.2.H" );
+    }
+    cluster4_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.3.H" );
+    }
+    cluster4_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.4.H" );
+    }
+    cluster4_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.5.H" );
+    }
+    cluster4_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.6.H" );
+    }
+    cluster4_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.7.H" );
+    }
+    cluster4_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.8.H" );
+    }
+    cluster4_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_0.9.H" );
+    }
+    cluster4_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_1.0.H" );
+    }
+    cluster4_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster4_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.17.H" );
+    }
+    cluster4_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.27.H" );
+    }
+    cluster4_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.37.H" );
+    }
+    cluster4_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.47.H" );
+    }
+    cluster4_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.57.H" );
+    }
+    cluster4_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.67.H" );
+    }
+    cluster4_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.77.H" );
+    }
+    cluster4_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.87.H" );
+    }
+    cluster4_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_4.97.H" );
+    }
+    cluster4_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_5.07.H" );
+    }
+    cluster4_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_5.17.H" );
+    }
+    cluster4_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_5.27.H" );
+    }
+    cluster4_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_5.37.H" );
+    }
+    cluster4_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster4_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_8.67.H" );
+    }
+    cluster4_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_8.92.H" );
+    }
+    cluster4_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_9.17.H" );
+    }
+    cluster4_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_9.42.H" );
+    }
+    cluster4_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_9.67.H" );
+    }
+    cluster4_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_9.92.H" );
+    }
+    cluster4_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_10.17.H" );
+    }
+    cluster4_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_10.42.H" );
+    }
+    cluster4_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_10.67.H" );
+    }
+    cluster4_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_10.92.H" );
+    }
+    cluster4_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_11.17.H" );
+    }
+    cluster4_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_11.42.H" );
+    }
+    cluster4_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_11.67.H" );
+    }
+    cluster4_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_11.92.H" );
+    }
+    cluster4_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster4_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_12.9167.H" );
+    }
+    cluster4_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_13.17.H" );
+    }
+    cluster4_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_13.4167.H" );
+    }
+    cluster4_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_13.67.H" );
+    }
+    cluster4_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_13.9167.H" );
+    }
+    cluster4_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_14.17.H" );
+    }
+    cluster4_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_14.4167.H" );
+    }
+    cluster4_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_14.67.H" );
+    }
+    cluster4_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_14.9167.H" );
+    }
+    cluster4_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_15.17.H" );
+    }
+    cluster4_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_15.4167.H" );
+    }
+    cluster4_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_15.67.H" );
+    }
+    cluster4_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_15.9167.H" );
+    }
+    cluster4_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_16.17.H" );
+    }
+    cluster4_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster4/cluster4_XoR_16.4167.H" );
+    }
+
+    // BOW
+    cluster5_XoR-0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_-0.1.H" );
+    }
+    cluster5_XoR0.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.0.H" );
+    }
+    cluster5_XoR0.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.1.H" );
+    }
+    cluster5_XoR0.2
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.2.H" );
+    }
+    cluster5_XoR0.3
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.3.H" );
+    }
+    cluster5_XoR0.4
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.4.H" );
+    }
+    cluster5_XoR0.5
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.5.H" );
+    }
+    cluster5_XoR0.6
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.6.H" );
+    }
+    cluster5_XoR0.7
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.7.H" );
+    }
+    cluster5_XoR0.8
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.8.H" );
+    }
+    cluster5_XoR0.9
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_0.9.H" );
+    }
+    cluster5_XoR1.0
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_1.0.H" );
+    }
+    cluster5_XoR1.1
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_1.1.H" );
+    }
+
+    // CENTER
+    cluster5_XoR4.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.17.H" );
+    }
+    cluster5_XoR4.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.27.H" );
+    }
+    cluster5_XoR4.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.37.H" );
+    }
+    cluster5_XoR4.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.47.H" );
+    }
+    cluster5_XoR4.57
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.57.H" );
+    }
+    cluster5_XoR4.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.67.H" );
+    }
+    cluster5_XoR4.77
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.77.H" );
+    }
+    cluster5_XoR4.87
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.87.H" );
+    }
+    cluster5_XoR4.97
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_4.97.H" );
+    }
+    cluster5_XoR5.07
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_5.07.H" );
+    }
+    cluster5_XoR5.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_5.17.H" );
+    }
+    cluster5_XoR5.27
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_5.27.H" );
+    }
+    cluster5_XoR5.37
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_5.37.H" );
+    }
+    cluster5_XoR5.47
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_5.47.H" );
+    }
+
+    // STERN
+    cluster5_XoR8.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_8.67.H" );
+    }
+    cluster5_XoR8.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_8.92.H" );
+    }
+    cluster5_XoR9.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_9.17.H" );
+    }
+    cluster5_XoR9.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_9.42.H" );
+    }
+    cluster5_XoR9.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_9.67.H" );
+    }
+    cluster5_XoR9.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_9.92.H" );
+    }
+    cluster5_XoR10.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_10.17.H" );
+    }
+    cluster5_XoR10.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_10.42.H" );
+    }
+    cluster5_XoR10.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_10.67.H" );
+    }
+    cluster5_XoR10.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_10.92.H" );
+    }
+    cluster5_XoR11.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_11.17.H" );
+    }
+    cluster5_XoR11.42
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_11.42.H" );
+    }
+    cluster5_XoR11.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_11.67.H" );
+    }
+    cluster5_XoR11.92
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_11.92.H" );
+    }
+    cluster5_XoR12.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_12.17.H" );
+    }
+
+     // WAKE
+    cluster5_XoR12.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_12.9167.H" );
+    }
+    cluster5_XoR13.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_13.17.H" );
+    }
+    cluster5_XoR13.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_13.4167.H" );
+    }
+    cluster5_XoR13.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_13.67.H" );
+    }
+    cluster5_XoR13.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_13.9167.H" );
+    }
+    cluster5_XoR14.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_14.17.H" );
+    }
+    cluster5_XoR14.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_14.4167.H" );
+    }
+    cluster5_XoR14.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_14.67.H" );
+    }
+    cluster5_XoR14.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_14.9167.H" );
+    }
+    cluster5_XoR15.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_15.17.H" );
+    }
+    cluster5_XoR15.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_15.4167.H" );
+    }
+    cluster5_XoR15.67
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_15.67.H" );
+    }
+    cluster5_XoR15.9167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_15.9167.H" );
+    }
+    cluster5_XoR16.17
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_16.17.H" );
+    }
+    cluster5_XoR16.4167
+    {
+        type cloud;
+        axis xyz;
+        points ( #include "cluster5/cluster5_XoR_16.4167.H" );
+    }
+);
+
+// *********************************************************************** //

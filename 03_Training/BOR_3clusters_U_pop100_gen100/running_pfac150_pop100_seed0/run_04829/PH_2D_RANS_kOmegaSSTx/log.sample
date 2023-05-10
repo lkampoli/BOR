@@ -1,0 +1,886 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : sample
+Date   : May 07 2023
+Time   : 21:31:18
+Host   : "spartan-bm119.hpc.unimelb.edu.au"
+PID    : 90606
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_3clusters_U_pop100_gen100/running_pfac150_pop100_seed0/run_04829/PH_2D_RANS_kOmegaSSTx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster0_XoR5.27 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR-0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.2 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.3 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.4 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.5 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.6 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.7 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.8 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR0.9 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR1.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR1.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.27 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.37 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.47 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.57 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.77 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.87 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR4.97 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR5.07 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR5.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR5.27 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR5.37 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR5.47 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR8.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR8.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR9.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR9.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR9.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR9.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR10.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR10.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR10.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR10.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR11.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR11.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR11.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR11.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR12.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR12.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster1_XoR13.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR-0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.2 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.3 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.4 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.5 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.6 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.7 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.8 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR0.9 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR1.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR1.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR10.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR11.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR11.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR11.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR11.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR12.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR12.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR13.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR13.4167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR13.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR13.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster2_XoR14.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR-0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.2 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.3 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.4 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.5 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.6 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.7 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.8 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR0.9 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR1.0 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster3_XoR1.1 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.27 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.37 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.47 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.57 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.77 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.87 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR4.97 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR5.07 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR5.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR5.27 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR5.37 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR5.47 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR8.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR8.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR9.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR9.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR9.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR9.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR10.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR10.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR10.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR10.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR11.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR11.42 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR11.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR11.92 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR12.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR12.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR13.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR13.4167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR13.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR13.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR14.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR14.4167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR14.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR14.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR15.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR15.4167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR15.67 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR15.9167 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR16.17 has zero points.
+--> FOAM Warning : 
+    From function sampledSets::combineSampledSets(..)
+    in file sampledSet/sampledSets/sampledSets.C at line 105
+    Sample set cluster4_XoR16.4167 has zero points.
+Reading set description:
+    cluster0_XoR-0.1
+    cluster0_XoR0.0
+    cluster0_XoR0.1
+    cluster0_XoR0.2
+    cluster0_XoR0.3
+    cluster0_XoR0.4
+    cluster0_XoR0.5
+    cluster0_XoR0.6
+    cluster0_XoR0.7
+    cluster0_XoR0.8
+    cluster0_XoR0.9
+    cluster0_XoR1.0
+    cluster0_XoR1.1
+    cluster0_XoR4.17
+    cluster0_XoR4.27
+    cluster0_XoR4.37
+    cluster0_XoR4.47
+    cluster0_XoR4.57
+    cluster0_XoR4.67
+    cluster0_XoR4.77
+    cluster0_XoR4.87
+    cluster0_XoR4.97
+    cluster0_XoR5.07
+    cluster0_XoR5.17
+    cluster0_XoR5.27
+    cluster0_XoR5.37
+    cluster0_XoR5.47
+    cluster0_XoR8.67
+    cluster0_XoR8.92
+    cluster0_XoR9.17
+    cluster0_XoR9.42
+    cluster0_XoR9.67
+    cluster0_XoR9.92
+    cluster0_XoR10.17
+    cluster0_XoR10.42
+    cluster0_XoR10.67
+    cluster0_XoR10.92
+    cluster0_XoR11.17
+    cluster0_XoR11.42
+    cluster0_XoR11.67
+    cluster0_XoR11.92
+    cluster0_XoR12.17
+    cluster0_XoR12.9167
+    cluster0_XoR13.17
+    cluster0_XoR13.4167
+    cluster0_XoR13.67
+    cluster0_XoR13.9167
+    cluster0_XoR14.17
+    cluster0_XoR14.4167
+    cluster0_XoR14.67
+    cluster0_XoR14.9167
+    cluster0_XoR15.17
+    cluster0_XoR15.4167
+    cluster0_XoR15.67
+    cluster0_XoR15.9167
+    cluster0_XoR16.17
+    cluster0_XoR16.4167
+    cluster1_XoR-0.1
+    cluster1_XoR0.0
+    cluster1_XoR0.1
+    cluster1_XoR0.2
+    cluster1_XoR0.3
+    cluster1_XoR0.4
+    cluster1_XoR0.5
+    cluster1_XoR0.6
+    cluster1_XoR0.7
+    cluster1_XoR0.8
+    cluster1_XoR0.9
+    cluster1_XoR1.0
+    cluster1_XoR1.1
+    cluster1_XoR4.17
+    cluster1_XoR4.27
+    cluster1_XoR4.37
+    cluster1_XoR4.47
+    cluster1_XoR4.57
+    cluster1_XoR4.67
+    cluster1_XoR4.77
+    cluster1_XoR4.87
+    cluster1_XoR4.97
+    cluster1_XoR5.07
+    cluster1_XoR5.17
+    cluster1_XoR5.27
+    cluster1_XoR5.37
+    cluster1_XoR5.47
+    cluster1_XoR8.67
+    cluster1_XoR8.92
+    cluster1_XoR9.17
+    cluster1_XoR9.42
+    cluster1_XoR9.67
+    cluster1_XoR9.92
+    cluster1_XoR10.17
+    cluster1_XoR10.42
+    cluster1_XoR10.67
+    cluster1_XoR10.92
+    cluster1_XoR11.17
+    cluster1_XoR11.42
+    cluster1_XoR11.67
+    cluster1_XoR11.92
+    cluster1_XoR12.17
+    cluster1_XoR12.9167
+    cluster1_XoR13.17
+    cluster1_XoR13.4167
+    cluster1_XoR13.67
+    cluster1_XoR13.9167
+    cluster1_XoR14.17
+    cluster1_XoR14.4167
+    cluster1_XoR14.67
+    cluster1_XoR14.9167
+    cluster1_XoR15.17
+    cluster1_XoR15.4167
+    cluster1_XoR15.67
+    cluster1_XoR15.9167
+    cluster1_XoR16.17
+    cluster1_XoR16.4167
+    cluster2_XoR-0.1
+    cluster2_XoR0.0
+    cluster2_XoR0.1
+    cluster2_XoR0.2
+    cluster2_XoR0.3
+    cluster2_XoR0.4
+    cluster2_XoR0.5
+    cluster2_XoR0.6
+    cluster2_XoR0.7
+    cluster2_XoR0.8
+    cluster2_XoR0.9
+    cluster2_XoR1.0
+    cluster2_XoR1.1
+    cluster2_XoR4.17
+    cluster2_XoR4.27
+    cluster2_XoR4.37
+    cluster2_XoR4.47
+    cluster2_XoR4.57
+    cluster2_XoR4.67
+    cluster2_XoR4.77
+    cluster2_XoR4.87
+    cluster2_XoR4.97
+    cluster2_XoR5.07
+    cluster2_XoR5.17
+    cluster2_XoR5.27
+    cluster2_XoR5.37
+    cluster2_XoR5.47
+    cluster2_XoR8.67
+    cluster2_XoR8.92
+    cluster2_XoR9.17
+    cluster2_XoR9.42
+    cluster2_XoR9.67
+    cluster2_XoR9.92
+    cluster2_XoR10.17
+    cluster2_XoR10.42
+    cluster2_XoR10.67
+    cluster2_XoR10.92
+    cluster2_XoR11.17
+    cluster2_XoR11.42
+    cluster2_XoR11.67
+    cluster2_XoR11.92
+    cluster2_XoR12.17
+    cluster2_XoR12.9167
+    cluster2_XoR13.17
+    cluster2_XoR13.4167
+    cluster2_XoR13.67
+    cluster2_XoR13.9167
+    cluster2_XoR14.17
+    cluster2_XoR14.4167
+    cluster2_XoR14.67
+    cluster2_XoR14.9167
+    cluster2_XoR15.17
+    cluster2_XoR15.4167
+    cluster2_XoR15.67
+    cluster2_XoR15.9167
+    cluster2_XoR16.17
+    cluster2_XoR16.4167
+    cluster3_XoR-0.1
+    cluster3_XoR0.0
+    cluster3_XoR0.1
+    cluster3_XoR0.2
+    cluster3_XoR0.3
+    cluster3_XoR0.4
+    cluster3_XoR0.5
+    cluster3_XoR0.6
+    cluster3_XoR0.7
+    cluster3_XoR0.8
+    cluster3_XoR0.9
+    cluster3_XoR1.0
+    cluster3_XoR1.1
+    cluster3_XoR4.17
+    cluster3_XoR4.27
+    cluster3_XoR4.37
+    cluster3_XoR4.47
+    cluster3_XoR4.57
+    cluster3_XoR4.67
+    cluster3_XoR4.77
+    cluster3_XoR4.87
+    cluster3_XoR4.97
+    cluster3_XoR5.07
+    cluster3_XoR5.17
+    cluster3_XoR5.27
+    cluster3_XoR5.37
+    cluster3_XoR5.47
+    cluster3_XoR8.67
+    cluster3_XoR8.92
+    cluster3_XoR9.17
+    cluster3_XoR9.42
+    cluster3_XoR9.67
+    cluster3_XoR9.92
+    cluster3_XoR10.17
+    cluster3_XoR10.42
+    cluster3_XoR10.67
+    cluster3_XoR10.92
+    cluster3_XoR11.17
+    cluster3_XoR11.42
+    cluster3_XoR11.67
+    cluster3_XoR11.92
+    cluster3_XoR12.17
+    cluster3_XoR12.9167
+    cluster3_XoR13.17
+    cluster3_XoR13.4167
+    cluster3_XoR13.67
+    cluster3_XoR13.9167
+    cluster3_XoR14.17
+    cluster3_XoR14.4167
+    cluster3_XoR14.67
+    cluster3_XoR14.9167
+    cluster3_XoR15.17
+    cluster3_XoR15.4167
+    cluster3_XoR15.67
+    cluster3_XoR15.9167
+    cluster3_XoR16.17
+    cluster3_XoR16.4167
+    cluster4_XoR-0.1
+    cluster4_XoR0.0
+    cluster4_XoR0.1
+    cluster4_XoR0.2
+    cluster4_XoR0.3
+    cluster4_XoR0.4
+    cluster4_XoR0.5
+    cluster4_XoR0.6
+    cluster4_XoR0.7
+    cluster4_XoR0.8
+    cluster4_XoR0.9
+    cluster4_XoR1.0
+    cluster4_XoR1.1
+    cluster4_XoR4.17
+    cluster4_XoR4.27
+    cluster4_XoR4.37
+    cluster4_XoR4.47
+    cluster4_XoR4.57
+    cluster4_XoR4.67
+    cluster4_XoR4.77
+    cluster4_XoR4.87
+    cluster4_XoR4.97
+    cluster4_XoR5.07
+    cluster4_XoR5.17
+    cluster4_XoR5.27
+    cluster4_XoR5.37
+    cluster4_XoR5.47
+    cluster4_XoR8.67
+    cluster4_XoR8.92
+    cluster4_XoR9.17
+    cluster4_XoR9.42
+    cluster4_XoR9.67
+    cluster4_XoR9.92
+    cluster4_XoR10.17
+    cluster4_XoR10.42
+    cluster4_XoR10.67
+    cluster4_XoR10.92
+    cluster4_XoR11.17
+    cluster4_XoR11.42
+    cluster4_XoR11.67
+    cluster4_XoR11.92
+    cluster4_XoR12.17
+    cluster4_XoR12.9167
+    cluster4_XoR13.17
+    cluster4_XoR13.4167
+    cluster4_XoR13.67
+    cluster4_XoR13.9167
+    cluster4_XoR14.17
+    cluster4_XoR14.4167
+    cluster4_XoR14.67
+    cluster4_XoR14.9167
+    cluster4_XoR15.17
+    cluster4_XoR15.4167
+    cluster4_XoR15.67
+    cluster4_XoR15.9167
+    cluster4_XoR16.17
+    cluster4_XoR16.4167
+    cluster5_XoR-0.1
+    cluster5_XoR0.0
+    cluster5_XoR0.1
+    cluster5_XoR0.2
+    cluster5_XoR0.3
+    cluster5_XoR0.4
+    cluster5_XoR0.5
+    cluster5_XoR0.6
+    cluster5_XoR0.7
+    cluster5_XoR0.8
+    cluster5_XoR0.9
+    cluster5_XoR1.0
+    cluster5_XoR1.1
+    cluster5_XoR4.17
+    cluster5_XoR4.27
+    cluster5_XoR4.37
+    cluster5_XoR4.47
+    cluster5_XoR4.57
+    cluster5_XoR4.67
+    cluster5_XoR4.77
+    cluster5_XoR4.87
+    cluster5_XoR4.97
+    cluster5_XoR5.07
+    cluster5_XoR5.17
+    cluster5_XoR5.27
+    cluster5_XoR5.37
+    cluster5_XoR5.47
+    cluster5_XoR8.67
+    cluster5_XoR8.92
+    cluster5_XoR9.17
+    cluster5_XoR9.42
+    cluster5_XoR9.67
+    cluster5_XoR9.92
+    cluster5_XoR10.17
+    cluster5_XoR10.42
+    cluster5_XoR10.67
+    cluster5_XoR10.92
+    cluster5_XoR11.17
+    cluster5_XoR11.42
+    cluster5_XoR11.67
+    cluster5_XoR11.92
+    cluster5_XoR12.17
+    cluster5_XoR12.9167
+    cluster5_XoR13.17
+    cluster5_XoR13.4167
+    cluster5_XoR13.67
+    cluster5_XoR13.9167
+    cluster5_XoR14.17
+    cluster5_XoR14.4167
+    cluster5_XoR14.67
+    cluster5_XoR14.9167
+    cluster5_XoR15.17
+    cluster5_XoR15.4167
+    cluster5_XoR15.67
+    cluster5_XoR15.9167
+    cluster5_XoR16.17
+    cluster5_XoR16.4167
+
+Time = 0
+--> FOAM Warning : 
+    From function sampledSets::classifyFields()
+    in file sampledSet/sampledSets/sampledSetsGrouping.C at line 109
+    Cannot find field file matching R
+
+Time = 2000
+
+End
+

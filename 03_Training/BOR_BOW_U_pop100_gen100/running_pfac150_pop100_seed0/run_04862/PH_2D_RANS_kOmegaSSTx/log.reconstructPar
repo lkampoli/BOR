@@ -1,0 +1,60 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : reconstructPar
+Date   : Apr 13 2023
+Time   : 19:21:21
+Host   : "spartan-bm116.hpc.unimelb.edu.au"
+PID    : 112643
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_BOW_U_pop100_gen100/running_pfac150_pop100_seed0/run_04862/PH_2D_RANS_kOmegaSSTx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Reconstructing fields for mesh region0
+
+Time = 2000
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        nut
+        p
+        k
+        omega
+
+    Reconstructing volVectorFields
+
+        U
+
+    Reconstructing volSymmTensorFields
+
+        R
+        Rx
+        Ax
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+Reconstructing sets:
+End.
+

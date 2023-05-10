@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : sample
+Date   : Apr 15 2023
+Time   : 06:36:12
+Host   : "spartan-bm097.hpc.unimelb.edu.au"
+PID    : 39860
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_CENTER_pop100_gen100/running_pfac150_pop100_seed0/run_04897/PH_2D_RANS_kOmegaSSTx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading set description:
+    XoR4.17
+    XoR4.27
+    XoR4.37
+    XoR4.47
+    XoR4.57
+    XoR4.67
+    XoR4.77
+    XoR4.87
+    XoR4.97
+    XoR5.07
+    XoR5.17
+    XoR5.27
+    XoR5.37
+    XoR5.47
+
+Time = 0
+
+Time = 2000
+
+End
+

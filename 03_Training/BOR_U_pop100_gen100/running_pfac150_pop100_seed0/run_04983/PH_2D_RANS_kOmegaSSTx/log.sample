@@ -1,0 +1,89 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : sample
+Date   : Apr 18 2023
+Time   : 05:25:19
+Host   : "spartan-bm111.hpc.unimelb.edu.au"
+PID    : 171853
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_U_pop100_gen100/running_pfac150_pop100_seed0/run_04983/PH_2D_RANS_kOmegaSSTx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading set description:
+    XoR-0.1
+    XoR0.0
+    XoR0.1
+    XoR0.2
+    XoR0.3
+    XoR0.4
+    XoR0.5
+    XoR0.6
+    XoR0.7
+    XoR0.8
+    XoR0.9
+    XoR1.0
+    XoR1.1
+    XoR4.17
+    XoR4.27
+    XoR4.37
+    XoR4.47
+    XoR4.57
+    XoR4.67
+    XoR4.77
+    XoR4.87
+    XoR4.97
+    XoR5.07
+    XoR5.17
+    XoR5.27
+    XoR5.37
+    XoR5.47
+    XoR8.67
+    XoR8.92
+    XoR9.17
+    XoR9.42
+    XoR9.67
+    XoR9.92
+    XoR10.17
+    XoR10.42
+    XoR10.67
+    XoR10.92
+    XoR11.17
+    XoR11.42
+    XoR11.67
+    XoR11.92
+    XoR12.17
+    XoR12.9167
+    XoR13.17
+    XoR13.4167
+    XoR13.67
+    XoR13.9167
+    XoR14.17
+    XoR14.4167
+    XoR14.67
+    XoR14.9167
+    XoR15.17
+    XoR15.4167
+    XoR15.67
+    XoR15.9167
+    XoR16.17
+    XoR16.4167
+
+Time = 0
+
+Time = 2000
+
+End
+

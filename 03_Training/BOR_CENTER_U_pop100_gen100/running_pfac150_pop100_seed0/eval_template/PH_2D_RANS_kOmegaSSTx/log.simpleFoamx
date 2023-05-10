@@ -1,0 +1,1707 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : /scratch/punim0394/PERIODICHILL/02_Training/OpenFOAM/bin/simpleFoamx -parallel
+Date   : Mar 31 2023
+Time   : 12:27:37
+Host   : "spartan-login1.hpc.unimelb.edu.au"
+PID    : 19157
+Case   : /data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx
+nProcs : 4
+Slaves : 
+3
+(
+"spartan-login1.hpc.unimelb.edu.au.19158"
+"spartan-login1.hpc.unimelb.edu.au.19159"
+"spartan-login1.hpc.unimelb.edu.au.19160"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting RAS turbulence model kOmegaSSTx
+bounding k, min: 0 max: 0.01 average: 0.01
+kOmegaSSTxCoeffs
+{
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.55555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+}
+
+No finite volume options present
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 1e-08
+    field U	 tolerance 1e-08
+    field "(k|epsilon|R|omega)"	 tolerance 1e-08
+
+
+Starting time loop
+
+Time = 1
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 8.7942081e-10, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 1.4747307e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.35738292, Final residual = 4.2703697e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 1, Final residual = 8.7264106e-09, No Iterations 150
+time step continuity errors : sum local = 1.4205274e-09, global = 4.396995e-14, cumulative = 4.396995e-14
+    Calculating Q1    
+--> Q1_org Min:-197.32465 Max: 26.810757
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999108
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.30159655
+    Calculating Q4    
+--> gradp:(-19.832447 -15.457033 -0.67422633) Max: (1.1832391 5.3101913 0.67422633)
+--> Q4_org Min:-16.598806 Max: 6.3533767
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:1.9163473e-10 Max: 39.90186
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.39457869
+    Calculating Q7    
+--> Q7_org Min:0.045520263 Max: 19.869133
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 961.14572
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.0057602232 Max: 0.44284372
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.99298802
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 1, Final residual = 7.0923708e-09, No Iterations 11
+bounding omega, min: -177.78609 max: 962550 average: 770.06617
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 1.9423948e-09, No Iterations 8
+bounding k, min: 0 max: 0.014133631 average: 0.0099728824
+ExecutionTime = 0.28 s  ClockTime = 0 s
+
+Time = 2
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.2893245, Final residual = 4.6284053e-09, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.24533213, Final residual = 5.0200114e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.24763488, Final residual = 4.0888354e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.065598194, Final residual = 2.9941373e-07, No Iterations 1000
+time step continuity errors : sum local = 1.4381954e-06, global = -6.2350522e-13, cumulative = -5.7953527e-13
+    Calculating Q1    
+--> Q1_org Min:-227.12841 Max: 47.70965
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99991706
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.30156449
+    Calculating Q4    
+--> gradp:(-30.996344 -19.504889 -0.85079129) Max: (24.158319 18.342787 0.85079129)
+--> Q4_org Min:-42.496066 Max: 109.27718
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.032186044 Max: 305.24113
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.7357184
+    Calculating Q7    
+--> Q7_org Min:0.37670845 Max: 30.996344
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 492.47109
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.1841773 Max: 0.45376417
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.9882202
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.10691341, Final residual = 9.8932793e-10, No Iterations 4
+bounding omega, min: -141.34866 max: 962550 average: 684.95142
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.37471402, Final residual = 5.0417675e-09, No Iterations 7
+bounding k, min: 0 max: 0.019484472 average: 0.010047711
+ExecutionTime = 1.05 s  ClockTime = 1 s
+
+Time = 3
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.34295803, Final residual = 7.4089765e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.22507087, Final residual = 5.2526584e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.20191444, Final residual = 1.5818814e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.0330205, Final residual = 9.8977907e-09, No Iterations 841
+time step continuity errors : sum local = 1.0052412e-07, global = -5.3148194e-14, cumulative = -6.3268346e-13
+    Calculating Q1    
+--> Q1_org Min:-324.93631 Max: 154.27622
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99973848
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.31900936
+    Calculating Q4    
+--> gradp:(-23.096419 -16.263474 -1.0093031) Max: (32.952983 23.138864 1.0093031)
+--> Q4_org Min:-47.012141 Max: 82.740494
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.048245859 Max: 493.83566
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.42806838
+    Calculating Q7    
+--> Q7_org Min:0.13889036 Max: 33.058855
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 129.89774
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.13099448 Max: 0.3658435
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98465878
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.041182163, Final residual = 1.6458285e-09, No Iterations 4
+bounding omega, min: -6145.9511 max: 962550 average: 643.34954
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.19737996, Final residual = 1.8980412e-09, No Iterations 7
+bounding k, min: 0 max: 0.023396254 average: 0.010773928
+ExecutionTime = 1.69 s  ClockTime = 1 s
+
+Time = 4
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.24868568, Final residual = 7.1137015e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.20602399, Final residual = 4.9922401e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.1490667, Final residual = 2.4293467e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.026782529, Final residual = 9.9539984e-09, No Iterations 615
+time step continuity errors : sum local = 8.6109944e-08, global = -4.5786721e-14, cumulative = -6.7847018e-13
+    Calculating Q1    
+--> Q1_org Min:-356.752 Max: 232.07364
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99958156
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.33679479
+    Calculating Q4    
+--> gradp:(-12.295863 -13.848242 -0.94343496) Max: (30.734387 21.628799 0.94343496)
+--> Q4_org Min:-19.922618 Max: 51.656684
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00016696106 Max: 506.09068
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.41232732
+    Calculating Q7    
+--> Q7_org Min:0.032390314 Max: 30.839405
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 38.711794
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.10037668 Max: 0.20316208
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98533388
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.011547178, Final residual = 2.0202848e-09, No Iterations 4
+bounding omega, min: -2823.1623 max: 962550 average: 633.91108
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.10030009, Final residual = 9.2567444e-09, No Iterations 6
+bounding k, min: 0 max: 0.025994864 average: 0.011561429
+ExecutionTime = 2.18 s  ClockTime = 2 s
+
+Time = 5
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.096680842, Final residual = 3.6507589e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.35601624, Final residual = 5.9858155e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.12023895, Final residual = 6.9172714e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.11603372, Final residual = 9.9625207e-09, No Iterations 562
+time step continuity errors : sum local = 3.3992508e-08, global = 2.4416523e-13, cumulative = -4.3430496e-13
+    Calculating Q1    
+--> Q1_org Min:-341.54389 Max: 251.20309
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99928409
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.35012317
+    Calculating Q4    
+--> gradp:(-8.4660131 -8.676018 -0.63029093) Max: (20.626768 14.449789 0.63029093)
+--> Q4_org Min:-13.616356 Max: 28.954523
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0065240686 Max: 450.23783
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.4200752
+    Calculating Q7    
+--> Q7_org Min:0.024727102 Max: 20.697929
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 34.439166
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.25144555 Max: 0.20386137
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98538986
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.0028951528, Final residual = 1.5229498e-09, No Iterations 4
+bounding omega, min: -386.59368 max: 962550 average: 632.40596
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.054254482, Final residual = 2.8577721e-09, No Iterations 6
+bounding k, min: 0 max: 0.030231329 average: 0.012149608
+ExecutionTime = 2.63 s  ClockTime = 2 s
+
+Time = 6
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.085748641, Final residual = 4.6487245e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.21867667, Final residual = 3.9725436e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.20018778, Final residual = 3.111695e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.19597966, Final residual = 9.9946819e-09, No Iterations 566
+time step continuity errors : sum local = 3.0099287e-08, global = 1.3311843e-13, cumulative = -3.0118653e-13
+    Calculating Q1    
+--> Q1_org Min:-287.99397 Max: 201.84982
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99965992
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.38242904
+    Calculating Q4    
+--> gradp:(-8.1007985 -11.184908 -0.48787883) Max: (15.696435 9.2556466 0.48787883)
+--> Q4_org Min:-9.6058162 Max: 30.676833
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0017995614 Max: 302.56068
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.43698644
+    Calculating Q7    
+--> Q7_org Min:0.055554121 Max: 15.698833
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 33.96887
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.45646324 Max: 0.33489428
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98526715
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00089423044, Final residual = 1.3259608e-09, No Iterations 4
+bounding omega, min: -2074.1266 max: 962550 average: 631.58252
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.048973146, Final residual = 3.4946582e-09, No Iterations 6
+bounding k, min: 0 max: 0.040311039 average: 0.012732996
+ExecutionTime = 3.08 s  ClockTime = 3 s
+
+Time = 7
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.19921507, Final residual = 8.8421581e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.0799635, Final residual = 6.9537411e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.26173362, Final residual = 4.3137518e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.09538304, Final residual = 9.8539176e-09, No Iterations 499
+time step continuity errors : sum local = 5.3814979e-08, global = 1.1142299e-14, cumulative = -2.9004423e-13
+    Calculating Q1    
+--> Q1_org Min:-227.80646 Max: 102.64198
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99969371
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.40999999
+    Calculating Q4    
+--> gradp:(-11.913806 -13.976187 -0.60963272) Max: (12.217738 6.466005 0.60963272)
+--> Q4_org Min:-14.025066 Max: 19.605338
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0028120332 Max: 163.27601
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.45223455
+    Calculating Q7    
+--> Q7_org Min:0.087117654 Max: 14.39788
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 33.465362
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.57120767 Max: 0.45308774
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98537559
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00044396761, Final residual = 1.1386686e-09, No Iterations 4
+bounding omega, min: -5218.2157 max: 962550 average: 631.06072
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.037650988, Final residual = 4.7634527e-09, No Iterations 6
+bounding k, min: 0 max: 0.049668284 average: 0.013182462
+ExecutionTime = 3.49 s  ClockTime = 3 s
+
+Time = 8
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.20297209, Final residual = 7.2542151e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.22900337, Final residual = 2.0815021e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.23263037, Final residual = 3.1177281e-09, No Iterations 7
+GAMG:  Solving for p, Initial residual = 0.060363177, Final residual = 9.8479659e-09, No Iterations 582
+time step continuity errors : sum local = 4.6561606e-08, global = 4.1101866e-14, cumulative = -2.4894236e-13
+    Calculating Q1    
+--> Q1_org Min:-187.44449 Max: 70.432711
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99998603
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.43153341
+    Calculating Q4    
+--> gradp:(-12.821245 -19.110062 -0.83356919) Max: (8.1257012 8.2152491 0.83356919)
+--> Q4_org Min:-16.169134 Max: 9.6210375
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00084833976 Max: 159.08588
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.46604892
+    Calculating Q7    
+--> Q7_org Min:0.050704944 Max: 19.204092
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 32.920622
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.30061405 Max: 0.20719253
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98578739
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00027777271, Final residual = 9.6555388e-09, No Iterations 3
+bounding omega, min: -565.81223 max: 962550 average: 631.43157
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.028329518, Final residual = 3.0176619e-09, No Iterations 6
+bounding k, min: 0 max: 0.056703619 average: 0.013537726
+ExecutionTime = 3.97 s  ClockTime = 4 s
+
+Time = 9
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.090196895, Final residual = 2.4737858e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.58808964, Final residual = 4.5359061e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.14292782, Final residual = 8.2492442e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.13114244, Final residual = 9.984667e-09, No Iterations 612
+time step continuity errors : sum local = 2.1462097e-08, global = 9.4287227e-14, cumulative = -1.5465514e-13
+    Calculating Q1    
+--> Q1_org Min:-176.50788 Max: 176.83714
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.9999863
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.44164685
+    Calculating Q4    
+--> gradp:(-10.582747 -16.92822 -0.73839858) Max: (5.6055816 7.5491999 0.73839858)
+--> Q4_org Min:-14.640198 Max: 7.3428659
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0012630655 Max: 221.10436
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.63412247
+    Calculating Q7    
+--> Q7_org Min:0.012184966 Max: 16.950459
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 32.335691
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.30264317 Max: 0.29413162
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98634139
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00018452652, Final residual = 7.0525073e-09, No Iterations 3
+bounding omega, min: -2335.4957 max: 962550 average: 631.30523
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.022260735, Final residual = 1.7292468e-09, No Iterations 6
+bounding k, min: 0 max: 0.062026704 average: 0.013867854
+ExecutionTime = 4.45 s  ClockTime = 4 s
+
+Time = 10
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.042250125, Final residual = 8.5582485e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.3446946, Final residual = 2.772049e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.14181188, Final residual = 6.6766449e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.2927356, Final residual = 9.9350924e-09, No Iterations 599
+time step continuity errors : sum local = 1.3433234e-08, global = -2.5875049e-14, cumulative = -1.8053018e-13
+    Calculating Q1    
+--> Q1_org Min:-187.02323 Max: 96.606999
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999666
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.45024524
+    Calculating Q4    
+--> gradp:(-9.4984347 -8.5041419 -0.37094546) Max: (5.4754144 6.9542382 0.37094546)
+--> Q4_org Min:-11.895764 Max: 6.7814626
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00095481243 Max: 265.62879
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.56895811
+    Calculating Q7    
+--> Q7_org Min:0.033948193 Max: 9.6465414
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 31.720498
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.56295212 Max: 0.71102752
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98685517
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00019253961, Final residual = 5.1157575e-09, No Iterations 3
+bounding omega, min: -3713.8139 max: 962550 average: 631.41117
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.019984279, Final residual = 1.4729049e-09, No Iterations 6
+bounding k, min: 0 max: 0.065387864 average: 0.014224526
+ExecutionTime = 5.02 s  ClockTime = 5 s
+
+Time = 11
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.093841849, Final residual = 3.3049764e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.092404173, Final residual = 5.0654067e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.19461639, Final residual = 9.1356787e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.12976388, Final residual = 9.853292e-09, No Iterations 373
+time step continuity errors : sum local = 2.6333938e-08, global = 1.8748249e-09, cumulative = 1.8746444e-09
+    Calculating Q1    
+--> Q1_org Min:-202.99837 Max: 23.966655
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999314
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.46294462
+    Calculating Q4    
+--> gradp:(-6.4579445 -6.260538 -0.58886744) Max: (5.1417958 13.500131 0.58886744)
+--> Q4_org Min:-11.212223 Max: 6.5277176
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00086847822 Max: 283.86528
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.58861384
+    Calculating Q7    
+--> Q7_org Min:0.028925982 Max: 13.515767
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 31.088937
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.46709528 Max: 0.69669745
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98721908
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00016145408, Final residual = 4.13595e-09, No Iterations 3
+bounding omega, min: -493.89069 max: 962550 average: 631.87451
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.018499724, Final residual = 1.3494434e-09, No Iterations 6
+bounding k, min: 0 max: 0.06749302 average: 0.014603676
+ExecutionTime = 5.33 s  ClockTime = 5 s
+
+Time = 12
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.08410505, Final residual = 3.0072097e-09, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.19867358, Final residual = 1.9822942e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.17456925, Final residual = 7.8217795e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.077747087, Final residual = 9.9341838e-09, No Iterations 537
+time step continuity errors : sum local = 2.4729154e-08, global = 7.0320541e-15, cumulative = 1.8746514e-09
+    Calculating Q1    
+--> Q1_org Min:-211.87769 Max: 33.750868
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99998428
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.47860395
+    Calculating Q4    
+--> gradp:(-5.5896727 -6.2550459 -0.54998389) Max: (5.5828576 12.608703 0.54998389)
+--> Q4_org Min:-6.0353988 Max: 7.5679644
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0013041127 Max: 281.00326
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.55732953
+    Calculating Q7    
+--> Q7_org Min:0.020203404 Max: 12.608734
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 30.452582
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.18420337 Max: 0.32185151
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.987406
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00014266199, Final residual = 4.2481935e-09, No Iterations 3
+bounding omega, min: -3851.3131 max: 962550 average: 632.0299
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.016469289, Final residual = 9.7258724e-09, No Iterations 5
+bounding k, min: 0 max: 0.068888033 average: 0.014976577
+ExecutionTime = 5.86 s  ClockTime = 6 s
+
+Time = 13
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.040616092, Final residual = 8.5876915e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.3791512, Final residual = 4.5053857e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.10681214, Final residual = 4.9004765e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.13137261, Final residual = 9.9600484e-09, No Iterations 572
+time step continuity errors : sum local = 1.3051145e-08, global = 4.0274072e-14, cumulative = 1.8746917e-09
+    Calculating Q1    
+--> Q1_org Min:-209.36942 Max: 48.655277
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99998055
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.49593298
+    Calculating Q4    
+--> gradp:(-4.6064717 -5.3443276 -0.47737818) Max: (6.0829014 10.944174 0.47737818)
+--> Q4_org Min:-5.0266035 Max: 6.4148599
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0013414681 Max: 265.34666
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.54099545
+    Calculating Q7    
+--> Q7_org Min:0.00043399577 Max: 10.946989
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 29.817605
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.25587924 Max: 0.21660174
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98744907
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00015441541, Final residual = 3.3994205e-09, No Iterations 3
+bounding omega, min: -306.43839 max: 962550 average: 632.80892
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.014189507, Final residual = 9.9311186e-09, No Iterations 5
+bounding k, min: 0 max: 0.070075934 average: 0.015317811
+ExecutionTime = 6.32 s  ClockTime = 6 s
+
+Time = 14
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.01599907, Final residual = 2.9572185e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.25738263, Final residual = 3.1692628e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.088423631, Final residual = 6.5679094e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.36146762, Final residual = 9.8162523e-09, No Iterations 591
+time step continuity errors : sum local = 6.4600123e-09, global = -4.7750192e-14, cumulative = 1.8746439e-09
+    Calculating Q1    
+--> Q1_org Min:-197.91201 Max: 64.379435
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99998939
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.51251618
+    Calculating Q4    
+--> gradp:(-2.9282299 -6.9422658 -0.30281738) Max: (5.8229013 5.3802981 0.30281738)
+--> Q4_org Min:-3.767302 Max: 6.6622841
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0013492738 Max: 246.70087
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.53679099
+    Calculating Q7    
+--> Q7_org Min:0.011870252 Max: 7.4104259
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 29.185436
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.49453283 Max: 0.35069041
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98740762
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00013714557, Final residual = 2.9052787e-09, No Iterations 3
+bounding omega, min: -1859.2085 max: 962550 average: 632.7579
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.011898564, Final residual = 9.5375595e-09, No Iterations 5
+bounding k, min: 0 max: 0.072242876 average: 0.015612771
+ExecutionTime = 6.78 s  ClockTime = 7 s
+
+Time = 15
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.042622879, Final residual = 9.5355841e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.084992499, Final residual = 6.2888501e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.12314615, Final residual = 9.0511362e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.15810267, Final residual = 9.9670809e-09, No Iterations 495
+time step continuity errors : sum local = 1.3552793e-08, global = 1.0860944e-14, cumulative = 1.8746548e-09
+    Calculating Q1    
+--> Q1_org Min:-183.00777 Max: 53.389947
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.9999992
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.52760105
+    Calculating Q4    
+--> gradp:(-3.20489 -10.304268 -0.44946585) Max: (3.8537408 4.5891533 0.44946585)
+--> Q4_org Min:-3.7008275 Max: 5.8250879
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0014739029 Max: 230.81817
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.51954461
+    Calculating Q7    
+--> Q7_org Min:0.027659567 Max: 10.305054
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 28.55523
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.47987488 Max: 0.32583203
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98733547
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00016284782, Final residual = 2.4816199e-09, No Iterations 3
+bounding omega, min: -85.934577 max: 962550 average: 633.05242
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.010120737, Final residual = 8.5049006e-09, No Iterations 5
+bounding k, min: 0 max: 0.074389678 average: 0.015857799
+ExecutionTime = 7.18 s  ClockTime = 7 s
+
+Time = 16
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.04516392, Final residual = 9.8575971e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.12913477, Final residual = 7.8114521e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.1159207, Final residual = 8.8155517e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.09465157, Final residual = 9.9618826e-09, No Iterations 502
+time step continuity errors : sum local = 1.3267954e-08, global = -1.8908942e-14, cumulative = 1.8746359e-09
+    Calculating Q1    
+--> Q1_org Min:-169.8251 Max: 28.051586
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.9999972
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.53863144
+    Calculating Q4    
+--> gradp:(-3.0374069 -7.7000575 -0.33587179) Max: (2.7764476 3.779835 0.33587179)
+--> Q4_org Min:-3.4464107 Max: 3.6722997
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00041312436 Max: 218.17405
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.60006664
+    Calculating Q7    
+--> Q7_org Min:0.0094443189 Max: 7.7002208
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 27.926157
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.25551577 Max: 0.22301073
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98726319
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 9.5220081e-05, Final residual = 2.5310648e-09, No Iterations 3
+bounding omega, min: -2472.1142 max: 962550 average: 632.34105
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0089964714, Final residual = 7.3470496e-09, No Iterations 5
+bounding k, min: -0.00012003993 max: 0.076264387 average: 0.016063531
+ExecutionTime = 7.6 s  ClockTime = 8 s
+
+Time = 17
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.024910625, Final residual = 5.4047193e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.30275603, Final residual = 3.3258182e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.078292427, Final residual = 7.8225876e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.11288605, Final residual = 9.9477543e-09, No Iterations 550
+time step continuity errors : sum local = 8.0045735e-09, global = -2.8415572e-14, cumulative = 1.8746075e-09
+    Calculating Q1    
+--> Q1_org Min:-161.00671 Max: 21.882242
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999739
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.54606264
+    Calculating Q4    
+--> gradp:(-4.6242598 -7.4178433 -0.32356178) Max: (2.2325489 3.0817038 0.32356178)
+--> Q4_org Min:-3.1463426 Max: 2.7824997
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.001695041 Max: 208.31559
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.68529662
+    Calculating Q7    
+--> Q7_org Min:6.0320824e-05 Max: 7.4231989
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 27.298523
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.060071577 Max: 0.22509432
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98719753
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.0001585833, Final residual = 1.9764723e-09, No Iterations 3
+bounding omega, min: -731.01188 max: 962550 average: 632.93382
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0081803022, Final residual = 6.4966384e-09, No Iterations 5
+bounding k, min: -0.00015981519 max: 0.077867152 average: 0.016255602
+ExecutionTime = 8.04 s  ClockTime = 8 s
+
+Time = 18
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0087210138, Final residual = 2.1255354e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.26210431, Final residual = 2.9921225e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.061833081, Final residual = 7.704795e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.37055051, Final residual = 9.9351647e-09, No Iterations 596
+time step continuity errors : sum local = 3.4093752e-09, global = 2.0355944e-14, cumulative = 1.8746278e-09
+    Calculating Q1    
+--> Q1_org Min:-156.28665 Max: 15.164443
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999837
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.55874294
+    Calculating Q4    
+--> gradp:(-4.7275731 -4.4212681 -0.21740314) Max: (2.0852607 4.9840942 0.21740314)
+--> Q4_org Min:-2.8770508 Max: 2.4738174
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00011976093 Max: 200.05341
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.71549718
+    Calculating Q7    
+--> Q7_org Min:0.0023258612 Max: 5.0135034
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 26.673792
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.19064254 Max: 0.23362074
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98713075
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00011659233, Final residual = 1.8593941e-09, No Iterations 3
+bounding omega, min: -2506.9925 max: 962550 average: 632.52221
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0076666722, Final residual = 5.8996638e-09, No Iterations 5
+bounding k, min: -3.0535381e-05 max: 0.079203227 average: 0.016453602
+ExecutionTime = 8.52 s  ClockTime = 8 s
+
+Time = 19
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.01937713, Final residual = 3.7976184e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.10325783, Final residual = 7.4191491e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.079281752, Final residual = 9.1119192e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.17226792, Final residual = 9.9602598e-09, No Iterations 539
+time step continuity errors : sum local = 7.0278187e-09, global = 7.4886468e-15, cumulative = 1.8746353e-09
+    Calculating Q1    
+--> Q1_org Min:-153.66738 Max: 17.583839
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999539
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.5728038
+    Calculating Q4    
+--> gradp:(-3.1063914 -3.2543459 -0.30915014) Max: (1.7135929 7.087448 0.30915014)
+--> Q4_org Min:-2.9862551 Max: 1.9691378
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0015640774 Max: 192.23318
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.71684898
+    Calculating Q7    
+--> Q7_org Min:0.0043186289 Max: 7.1042925
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 26.054001
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.21256853 Max: 0.27066084
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98705072
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00010832586, Final residual = 1.4784651e-09, No Iterations 3
+bounding omega, min: -703.19107 max: 962550 average: 632.4268
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0073908714, Final residual = 5.3651142e-09, No Iterations 5
+bounding k, min: -2.2656026e-05 max: 0.080298152 average: 0.016661577
+ExecutionTime = 8.95 s  ClockTime = 9 s
+
+Time = 20
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.02073347, Final residual = 4.1382948e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.088660617, Final residual = 4.3528647e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.077791368, Final residual = 8.9360294e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.11266751, Final residual = 9.6085303e-09, No Iterations 428
+time step continuity errors : sum local = 6.96266e-09, global = 4.9329383e-11, cumulative = 1.9239647e-09
+    Calculating Q1    
+--> Q1_org Min:-151.03226 Max: 25.575927
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999089
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.58526481
+    Calculating Q4    
+--> gradp:(-2.7255128 -2.994184 -0.22093078) Max: (1.6301696 5.0649674 0.22093078)
+--> Q4_org Min:-2.0447181 Max: 1.9069945
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0026718403 Max: 185.30479
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.72237813
+    Calculating Q7    
+--> Q7_org Min:0.01422144 Max: 5.1826346
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 25.441085
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.14545347 Max: 0.23069572
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98694818
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 9.5728104e-05, Final residual = 1.5789359e-09, No Iterations 3
+bounding omega, min: -3069.9082 max: 962550 average: 632.03979
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0071149824, Final residual = 4.9884642e-09, No Iterations 5
+bounding k, min: -0.00012765307 max: 0.081192466 average: 0.016872901
+ExecutionTime = 9.31 s  ClockTime = 9 s
+
+Time = 21
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.012596202, Final residual = 2.6547532e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.17027416, Final residual = 1.8270323e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.059975095, Final residual = 8.4774875e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.11637152, Final residual = 9.8145498e-09, No Iterations 509
+time step continuity errors : sum local = 4.8824509e-09, global = 1.1494948e-14, cumulative = 1.9239762e-09
+    Calculating Q1    
+--> Q1_org Min:-147.17151 Max: 35.608586
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99997274
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.59604887
+    Calculating Q4    
+--> gradp:(-1.9859949 -2.5291047 -0.17763838) Max: (1.4706367 4.0724639 0.17763838)
+--> Q4_org Min:-1.7962828 Max: 1.6508524
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00075713783 Max: 178.98682
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.73465813
+    Calculating Q7    
+--> Q7_org Min:0.010677325 Max: 4.0729612
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 24.836458
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.087604115 Max: 0.23230687
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98682
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00015592409, Final residual = 1.3051732e-09, No Iterations 3
+bounding omega, min: -50.57844 max: 962550 average: 632.6112
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0067051695, Final residual = 4.765506e-09, No Iterations 5
+bounding k, min: -8.8382479e-06 max: 0.082262553 average: 0.01707848
+ExecutionTime = 9.72 s  ClockTime = 10 s
+
+Time = 22
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0050612853, Final residual = 6.9840862e-09, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.15240656, Final residual = 1.7646556e-09, No Iterations 8
+smoothSolver:  Solving for Uz, Initial residual = 0.047094182, Final residual = 7.2869162e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.32192142, Final residual = 9.9766552e-09, No Iterations 579
+time step continuity errors : sum local = 2.2611792e-09, global = 2.4520428e-15, cumulative = 1.9239786e-09
+    Calculating Q1    
+--> Q1_org Min:-141.9593 Max: 41.217383
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999528
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.6151324
+    Calculating Q4    
+--> gradp:(-1.7665693 -2.7843779 -0.12145286) Max: (2.0370867 2.552856 0.12145286)
+--> Q4_org Min:-1.6291154 Max: 1.5784816
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00059412902 Max: 174.13557
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.7565712
+    Calculating Q7    
+--> Q7_org Min:0.0034722778 Max: 2.8891112
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 24.240922
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.13690214 Max: 0.23375816
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98666888
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 7.9405698e-05, Final residual = 1.4457143e-09, No Iterations 3
+bounding omega, min: -3557.6286 max: 962550 average: 631.94476
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0062543185, Final residual = 4.5450352e-09, No Iterations 5
+bounding k, min: -0.00015256439 max: 0.083243232 average: 0.017273315
+ExecutionTime = 10.19 s  ClockTime = 10 s
+
+Time = 23
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0093432698, Final residual = 1.4344057e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.075910017, Final residual = 5.6621994e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.052262932, Final residual = 6.8498737e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.17387723, Final residual = 9.8867043e-09, No Iterations 552
+time step continuity errors : sum local = 4.0389194e-09, global = 3.2461394e-15, cumulative = 1.9239819e-09
+    Calculating Q1    
+--> Q1_org Min:-135.97863 Max: 38.781893
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99998682
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.63681794
+    Calculating Q4    
+--> gradp:(-1.2330746 -3.9540952 -0.17247521) Max: (1.621149 1.9992091 0.17247521)
+--> Q4_org Min:-1.341339 Max: 1.6110817
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00069009744 Max: 170.09654
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.78304802
+    Calculating Q7    
+--> Q7_org Min:0.0023488622 Max: 3.9730368
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 23.654788
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.1456779 Max: 0.23503169
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98655186
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00012410846, Final residual = 1.2414951e-09, No Iterations 3
+bounding omega, min: -430.36612 max: 962550 average: 632.17885
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0059411806, Final residual = 4.2872139e-09, No Iterations 5
+bounding k, min: -0.00018258059 max: 0.084157633 average: 0.017456852
+ExecutionTime = 10.63 s  ClockTime = 11 s
+
+Time = 24
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.010195464, Final residual = 1.8462839e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.052728314, Final residual = 2.2416956e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.052170305, Final residual = 6.6610493e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.11689422, Final residual = 9.9899782e-09, No Iterations 521
+time step continuity errors : sum local = 4.3342833e-09, global = -1.6175351e-15, cumulative = 1.9239803e-09
+    Calculating Q1    
+--> Q1_org Min:-129.99184 Max: 39.049478
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999926
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.65763597
+    Calculating Q4    
+--> gradp:(-1.1029256 -3.1103335 -0.13567084) Max: (1.037885 1.3383611 0.13567084)
+--> Q4_org Min:-1.0896525 Max: 1.2755172
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0025501396 Max: 167.35523
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.80203328
+    Calculating Q7    
+--> Q7_org Min:0.002718554 Max: 3.1111655
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 23.078085
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.097510184 Max: 0.23654488
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98647688
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 9.7909507e-05, Final residual = 1.6243591e-09, No Iterations 3
+bounding omega, min: -3964.6506 max: 962550 average: 631.70462
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0057085344, Final residual = 4.0811826e-09, No Iterations 5
+bounding k, min: -0.00025617205 max: 0.085002823 average: 0.017632967
+ExecutionTime = 11.04 s  ClockTime = 11 s
+
+Time = 25
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0068012063, Final residual = 1.4082831e-09, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.098137107, Final residual = 7.2220012e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.044910086, Final residual = 6.4226908e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.10178958, Final residual = 9.8446894e-09, No Iterations 441
+time step continuity errors : sum local = 3.3156279e-09, global = 4.6793479e-15, cumulative = 1.923985e-09
+    Calculating Q1    
+--> Q1_org Min:-124.53506 Max: 31.44503
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999388
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.67752037
+    Calculating Q4    
+--> gradp:(-1.457858 -2.7910069 -0.12174201) Max: (0.91779092 2.1150612 0.12174201)
+--> Q4_org Min:-1.0149957 Max: 1.0942911
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.00094618625 Max: 164.84202
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.81953425
+    Calculating Q7    
+--> Q7_org Min:0.00020428232 Max: 2.7910111
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 22.510761
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.067720222 Max: 0.2382736
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98638966
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 0.00012807921, Final residual = 1.3337547e-09, No Iterations 3
+bounding omega, min: -241.82384 max: 962550 average: 631.92505
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0055478592, Final residual = 3.986291e-09, No Iterations 5
+bounding k, min: -0.00037842407 max: 0.085757592 average: 0.017807441
+ExecutionTime = 11.42 s  ClockTime = 11 s
+
+Time = 26
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0032896942, Final residual = 7.5788056e-09, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.098465887, Final residual = 7.923476e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.038114295, Final residual = 6.2099672e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.18291219, Final residual = 9.8974518e-09, No Iterations 527
+time step continuity errors : sum local = 2.0239402e-09, global = -8.1500877e-15, cumulative = 1.9239768e-09
+    Calculating Q1    
+--> Q1_org Min:-119.76304 Max: 21.73005
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99997544
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.69639955
+    Calculating Q4    
+--> gradp:(-1.9123724 -1.9439819 -0.17541353) Max: (0.79990389 4.0214578 0.17541353)
+--> Q4_org Min:-1.0169055 Max: 0.97446212
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0033355952 Max: 163.15784
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.85167655
+    Calculating Q7    
+--> Q7_org Min:0.0013320487 Max: 4.0341361
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 21.952805
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.070101623 Max: 0.24409462
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98629202
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 9.7186187e-05, Final residual = 1.6733281e-09, No Iterations 3
+bounding omega, min: -4360.6171 max: 962550 average: 631.38043
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0054431694, Final residual = 4.0019049e-09, No Iterations 5
+bounding k, min: -0.00073139421 max: 0.086396271 average: 0.017984868
+ExecutionTime = 11.84 s  ClockTime = 12 s
+
+Time = 27
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0049408956, Final residual = 8.4748365e-09, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.058019228, Final residual = 4.6754378e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.039849682, Final residual = 6.3163047e-09, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.1507831, Final residual = 9.9377553e-09, No Iterations 560
+time step continuity errors : sum local = 2.5062699e-09, global = -4.7899613e-15, cumulative = 1.923972e-09
+    Calculating Q1    
+--> Q1_org Min:-115.52371 Max: 20.000743
+--> Q1     Min:0 Max: 1
+    Calculating Q2    
+--> Q2    Min:0 Max :0.99999302
+    Reading transport Properties
+--> nu  :3.3245e-05
+    Calculating Q3    
+--> Q3    Min:3.0079711e-20 Max :0.71418629
+    Calculating Q4    
+--> gradp:(-1.6694079 -1.8422555 -0.19649009) Max: (0.72885982 4.5046503 0.19649009)
+--> Q4_org Min:-0.97492067 Max: 0.77122947
+--> Min Q4:0Max :1
+    Calculating Q5    
+--> Q5_org Min:0.0027277743 Max: 161.29934
+--> Min Q5:0Max :1
+    Calculating Q6    
+--> Q6    Min:0 Max :0.8909244
+    Calculating Q7    
+--> Q7_org Min:1.9926255e-05 Max: 4.5522663
+--> Min Q7:0Max :1
+    Calculating Q8    
+--> Q8_org Min:0 Max: 21.404272
+--> Min/Max Q8:01
+    Calculating Q9    
+--> Q9_org Min:-0.074327035 Max: 0.25091349
+--> Min/Max Q9:01
+    Calculating Q10    
+--> Q10    Min:0 Max :0.98618333
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,omega)" at line 35
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for omega, Initial residual = 9.6915022e-05, Final residual = 1.2820467e-09, No Iterations 3
+bounding omega, min: -66.029279 max: 962550 average: 631.45531
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,k)" at line 32
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for k, Initial residual = 0.0053771004, Final residual = 4.1123478e-09, No Iterations 5
+bounding k, min: -0.00036993857 max: 0.086900033 average: 0.018166912
+ExecutionTime = 12.29 s  ClockTime = 12 s
+
+Time = 28
+
+--> FOAM Warning : 
+    From function gaussConvectionScheme
+    in file finiteVolume/convectionSchemes/gaussConvectionScheme/gaussConvectionScheme.H at line 123
+    Reading "/data/scratch/projects/punim0394/BOR/2.GEP_IN_THE_LOOP/new_EVE3_from_Fabian/BOR_pop100_gen100/running_template/eval_template/PH_2D_RANS_kOmegaSSTx/system/fvSchemes.divSchemes.div(phi,U)" at line 31
+    Unbounded 'Gauss' div scheme used in steady-state solver, use 'bounded Gauss' to ensure boundedness.
+    To remove this warning switch off 'warnUnboundedGauss' in "/usr/local/easybuild/software/OpenFOAM/2.4.0-intel-2017.u2/OpenFOAM-2.4.0/etc/controlDict"
+smoothSolver:  Solving for Ux, Initial residual = 0.0052751073, Final residual = 8.6436158e-09, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.036099039, Final residual = 1.5522487e-09, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.039420176, Final residual = 6.114218e-09, No Iterations 6
+[mpiexec@spartan-login1.hpc.unimelb.edu.au] Sending Ctrl-C to processes as requested
+[mpiexec@spartan-login1.hpc.unimelb.edu.au] Press Ctrl-C again to force abort

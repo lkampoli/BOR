@@ -1,0 +1,218 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type sets;
+
+setFormat raw; //csv;
+
+formatOptions
+{
+    ensight
+    {
+        format  ascii;
+    }
+}
+
+interpolationScheme cellPoint;
+
+fields (U R);
+
+sets
+(
+    cluster0 
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        ordered true;
+        points ( #include "cluster0.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+    cluster1
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        //ordered true;
+        points ( #include "cluster1.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+    cluster2
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        //ordered true;
+        points ( #include "cluster2.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+    cluster3
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        //ordered true;
+        points ( #include "cluster3.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+    cluster4
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        //ordered true;
+        points ( #include "cluster4.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+    cluster5
+    {
+        //type patchCloud; 
+        type cloud; 
+        axis xyz;
+        //ordered true;
+        points ( #include "cluster5.H" );
+        //patches     ("BoR");
+        //patches     ("'*'");
+        //maxDistance 1.1;
+        //interpolate true;
+    }
+
+//sets
+//(
+//    // BOW
+//    XoR-0.1
+//    {
+//        type        face;
+//        axis        y;
+//        start       (-0.1  0.0 0);
+//        end         (-0.1  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR0.0
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.  0.0 0); 
+//        end         (0.  1. 0); 
+//        //nPoints     87;
+//    }
+//    XoR0.1
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.1  0.0 0); 
+//        end         (0.1  1. 0); 
+//        //nPoints     94;
+//    }
+//    XoR0.2
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.2  0.0 0);
+//        end         (0.2  1. 0);
+//        //nPoints     96;
+//    }
+//    XoR0.3
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.3  0.0 0);
+//        end         (0.3  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR0.4
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.4  0.0 0); 
+//        end         (0.4  1. 0); 
+//        //nPoints     98;
+//    }
+//    XoR0.5
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.5  0.0 0);
+//        end         (0.5  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR0.6
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.6  0.0 0);
+//        end         (0.6  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR0.7
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.7  0.0 0);
+//        end         (0.7  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR0.8
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.8  0.0 0); 
+//        end         (0.8  1. 0); 
+//        //nPoints     98;
+//    }
+//    XoR0.9
+//    {
+//        type        face;
+//        axis        y;
+//        start       (0.9  0.0 0);
+//        end         (0.9  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR1.0
+//    {
+//        type        face;
+//        axis        y;
+//        start       (1.0  0.0 0);
+//        end         (1.0  1. 0);
+//        //nPoints     98;
+//    }
+//    XoR1.1
+//    {
+//        type        face;
+//        axis        y;
+//        start       (1.1  0.0 0);
+//        end         (1.1  1. 0);
+//        //nPoints     98;
+//    }
+
+);
+
+// *********************************************************************** //

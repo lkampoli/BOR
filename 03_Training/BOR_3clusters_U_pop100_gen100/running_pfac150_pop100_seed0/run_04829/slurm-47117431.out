@@ -1,0 +1,386 @@
+Running
+wmakeLnInclude: linking include files to ./lnInclude
+Making dependency list for source file kOmegaSSTx.C
+icpc: command line warning #10121: overriding '-xAVX2' with '-xHost'
+icpc: command line warning #10121: overriding '-xAVX2' with '-xHost'
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster0_XoR5.27_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR-0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.2_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.3_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.4_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.5_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.6_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.7_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.8_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR0.9_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR1.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:131: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster3_XoR1.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.27_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.37_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.47_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.57_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.77_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.87_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR4.97_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR5.07_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR5.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR5.27_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR5.37_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR5.47_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR8.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR8.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR9.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR9.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR9.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR9.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR10.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR10.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR10.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR10.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR11.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR11.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR11.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR11.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR12.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR12.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR13.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR13.4167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR13.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR13.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR14.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR14.4167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR14.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR14.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR15.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR15.4167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR15.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR15.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR16.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:153: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster4_XoR16.4167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR-0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.2_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.3_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.4_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.5_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.6_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.7_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.8_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR0.9_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR1.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR1.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.27_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.37_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.47_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.57_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.77_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.87_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR4.97_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR5.07_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR5.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR5.27_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR5.37_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR5.47_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR8.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR8.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR9.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR9.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR9.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR9.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR10.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR10.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR10.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR10.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR11.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR11.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR11.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR11.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR12.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR12.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster1_XoR13.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR-0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.2_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.3_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.4_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.5_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.6_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.7_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.8_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR0.9_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR1.0_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR1.1_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR10.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR11.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR11.42_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR11.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR11.92_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR12.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR12.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR13.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR13.4167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR13.67_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR13.9167_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+./run_all.py:173: UserWarning: loadtxt: input contained no data: "./postProcessing/sets/2000/cluster2_XoR14.17_U.xy"
+  data = np.loadtxt(os.path.join(post_folder, str(max_iter), post_file))
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it
+empty cluster line file ... skip it

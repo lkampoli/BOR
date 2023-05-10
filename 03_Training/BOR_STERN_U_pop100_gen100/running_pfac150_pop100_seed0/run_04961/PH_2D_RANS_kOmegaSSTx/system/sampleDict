@@ -1,0 +1,160 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+libs ("libsampling.so");
+
+type sets;
+
+setFormat csv;
+
+formatOptions
+{
+    ensight
+    {
+        format  ascii;
+    }
+}
+
+interpolationScheme cellPoint;
+
+fields (U);
+
+sets
+(
+    // STERN
+    XoR8.67
+    {
+        type        face;
+        axis        y;
+        start       (8.6667 0.0 0.0); 
+        end         (8.6667 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR8.92
+    {
+        type        face;
+        axis        y;
+        start       (8.9167 0.0 0.0); 
+        end         (8.9167 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR9.17
+    {
+        type        face;
+        axis        y;
+        start       (9.1667 0.0 0.0);
+        end         (9.1667 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR9.42
+    {
+        type        face;
+        axis        y;
+        start       (9.4167 0.0 0.0); 
+        end         (9.4167 1.0 0.0);
+        //nPoints     91;
+    }
+    XoR9.67
+    {
+        type        face;
+        axis        y;
+        start       (9.6667 0.0 0.0); 
+        end         (9.6667 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR9.92
+    {
+        type        face;
+        axis        y;
+        start       (9.9167 0.0 0.0); 
+        end         (9.9167 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR10.17
+    {
+        type        face;
+        axis        y;
+        start       (10.1667 0.0 0.0); 
+        end         (10.1667 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR10.42
+    {
+        type        face;
+        axis        y;
+        start       (10.4167 0.0 0.0); 
+        end         (10.4167 1.0 0.0); 
+        //nPoints     91;
+    }   
+    XoR10.67
+    {
+        type        face;
+        axis        y;
+        start       (10.6667 0.0 0.0); 
+        end         (10.6667 1.0 0.0);
+        //nPoints     91;
+    }
+    XoR10.92
+    {
+        type        face;
+        axis        y;
+        start       (10.9167 0.0 0.0); 
+        end         (10.9167 1.0 0.0); 
+        //nPoints     90;
+    }
+    XoR11.17
+    {
+        type        face;
+        axis        y;
+        start       (11.1667 0.0 0.0); 
+        end         (11.1667 1.0 0.0); 
+        //nPoints     90;
+    }
+    XoR11.42
+    {
+        type        face;
+        axis        y;
+        start       (11.4167 0.0 0.0);
+        end         (11.4167 1.0 0.0);
+        //nPoints     90;
+    }
+    XoR11.67
+    {
+        type        face;
+        axis        y;
+        start       (11.6667 0.0 0.0); 
+        end         (11.6667 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR11.92
+    {
+        type        face;
+        axis        y;
+        start       (11.9167 0.0 0.0); 
+        end         (11.9167 1.0 0.0); 
+        //nPoints     91;
+    }
+    XoR12.17
+    {
+        type        face;
+        axis        y;
+        start       (12.1667 0.0 0.0); 
+        end         (12.1667 1.0 0.0); 
+        //nPoints     91;
+    }
+);
+
+// *********************************************************************** //
