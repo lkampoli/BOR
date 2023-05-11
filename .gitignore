@@ -2,3 +2,11 @@ log.simpleFoam
 log.*
 slurm-*
 *.pkl
+*.zip
+*.tec
+*.lpk
+*.vtm
+*.eps
+*.pdf
+*.png
+*.jpeg
