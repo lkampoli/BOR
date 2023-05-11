@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         steadyState;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default                         none;
+    div(phi,U)                      Gauss linearUpwind grad(U); //Gauss linear; //Gauss linearUpwind grad(U);
+    div(phi,k)                      Gauss linearUpwind grad(k); //Gauss limitedLinear 1; //Gauss linear; //bounded Gauss limitedLinear 1; //bounded Gauss linearUpwind grad(k);
+    div(phi,epsilon)                Gauss linear; //bounded Gauss limitedLinear 1; //bounded Gauss linearUpwind grad(epsilon);
+    div(phi,R)                      Gauss linear; //bounded Gauss limitedLinear 1; //bounded Gauss linearUpwind grad(R);
+    div(phi,omega)                  Gauss linearUpwind grad(omega); //Gauss limitedLinear 1; //bounded Gauss limitedLinear 1; //bounded Gauss linearUpwind grad(omega);
+    div(R)                          Gauss linear;
+    div((nu*dev2(T(grad(U)))))      Gauss linear;
+    div((nuEff*dev2(T(grad(U)))))   Gauss linear;
+    div((nuEff*dev(T(grad(U)))))    Gauss linear;
+    div(div(phi,U))                 Gauss linear;
+    div(nonlinearStress)            Gauss linear;
+    div(dev(((2*k)*aijx)))          Gauss linear;
+}
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+fluxRequired
+{
+    default         no;
+        p;
+}
+
+wallDist
+{
+    method meshWave;
+}
+
+
+// ************************************************************************* //
