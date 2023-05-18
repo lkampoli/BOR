@@ -31,7 +31,7 @@ formatOptions
 interpolationScheme cellPoint;
 
 //fields (U R);
-fields (U Rall);
+fields (U k Rall);
 
 sets
 (
