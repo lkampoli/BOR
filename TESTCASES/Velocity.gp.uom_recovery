@@ -1,0 +1,982 @@
+set term pdfcairo; 
+set output 'Velocity.eps'
+set terminal postscript eps enhanced color font 'Helvetica,16'
+set termopt enhanced
+set key top left
+set grid back
+
+#set key samplen 3 spacing .95 font ",8"
+set key samplen 3 spacing 1.15 font ",12"
+set key at graph 0.01, 0.95
+#set key at graph -0.05, 0.95
+
+set ylabel 'r/R' offset 2
+#set ylabel 'y/R' 
+set xlabel 'U_x/U_b
+set yrange [0:1] reverse
+set xrange [*:*]
+set grid
+
+ColorNames = '\
+white black dark-grey red web-green web-blue dark-magenta dark-cyan dark-orange dark-yellow \
+royalblue goldenrod dark-spring-green purple steelblue dark-red dark-chartreuse orchid aquamarine brown \
+yellow turquoise grey0 grey10 grey20 grey30 grey40 grey50 grey60 grey70 \
+grey grey80 grey90 grey100 light-red light-green light-blue light-magenta light-cyan light-goldenrod \
+light-pink light-turquoise gold green dark-green spring-green forest-green sea-green blue dark-blue \
+midnight-blue navy medium-blue skyblue cyan magenta dark-turquoise dark-pink coral light-coral \
+orange-red salmon dark-salmon khaki dark-khaki dark-goldenrod beige olive orange violet \
+dark-violet plum dark-plum dark-olivegreen orangered4 brown4 sienna4 orchid4 mediumpurple3 slateblue1 \
+yellow4 sienna1 tan1 sandybrown light-salmon pink khaki1 lemonchiffon bisque honeydew \
+slategrey seagreen antiquewhite chartreuse greenyellow gray light-gray light-grey dark-gray slategray \
+gray0 gray10 gray20 gray30 gray40 gray50 gray60 gray70 gray80 gray90 \
+gray100'
+
+set style line 100 lw 5 pt 7 ps 0.7 lc rgb 'black' 	# exp.
+set style line 101 lw 5 pt 7 ps 0.7 lc rgb 'red'   	# baseline
+set style line 102 lw 5 pt 7 ps 0.7 lc rgb 'green'
+set style line 103 lw 5 pt 7 ps 0.7 lc rgb 'blue'
+set style line 104 lw 5 pt 7 ps 0.7 lc rgb 'orange'
+set style line 105 lw 5 pt 7 ps 0.7 lc rgb 'light-magenta'
+set style line 106 lw 5 pt 7 ps 0.7 lc rgb 'grey'
+set style line 107 lw 5 pt 7 ps 0.7 lc rgb 'purple'
+set style line 108 lw 5 pt 7 ps 0.7 lc rgb 'violet'
+set style line 109 lw 5 pt 7 ps 0.7 lc rgb 'goldenrod'
+set style line 110 lw 5 pt 7 ps 0.7 lc rgb 'plum'
+set style line 111 lw 5 pt 7 ps 0.7 lc rgb 'greenyellow'
+set style line 112 lw 5 pt 7 ps 0.7 lc rgb 'dark-cyan'
+set style line 113 lw 5 pt 7 ps 0.7 lc rgb 'dark-magenta'
+set style line 114 lw 5 pt 7 ps 0.7 lc rgb 'magenta'
+set style line 115 lw 5 pt 7 ps 0.7 lc rgb 'yellow'
+set style line 116 lw 3 pt 7 ps 0.7 lc rgb 'gray80'
+
+f1a = 'SST_MediumBody_with.inlet.dat.profile.interpolated/postProcessing/sample/291000/'
+f1b = 'SST_MediumBody_with.inlet.dat.profile.interpolated/postProcessing/sampleDict/291000/'
+
+f2 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP/postProcessing/sample/81000/'			# ON OFF
+f3 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_aij_OFF_Rij_ON/postProcessing/sample/78000/'	# OFF ON
+f4 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_all_ON/postProcessing/sample/83000/'		# ON ON
+
+f5a = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Chitrarth_Lav/postProcessing/sample/179000/'
+f5b = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Chitrarth_Lav/postProcessing/sample/179000/Rall/'
+f5c = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Chitrarth_Lav/postProcessing/sampleDict/278000/'
+
+f6 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_g1/postProcessing/sampleDict/10000/'
+f7 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_g2/postProcessing/sampleDict/10000/'
+f8 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_g3/postProcessing/sampleDict/5000/'
+
+f9 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_EARSMWallin/postProcessing/sampleDict/330000/'
+
+f10= 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_OF7/postProcessing/sampleDict/110000/'
+f11= 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_OF8/postProcessing/sampleDict/120000/'
+
+f13 ='SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_YuanFang_FlatPlate/postProcessing/sampleDict/150000/'
+f14 ='SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_YuanFang_HumpFlow/postProcessing/sampleDict/150000/' 
+f15 ='SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_YuanFang_ChannelFlow/postProcessing/sampleDict/150000/'
+f16 ='SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_YuanFang_JetFlow/postProcessing/sampleDict/150000/'
+
+f17 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-57_aijx_term_ON_Rterm_corr_ON/postProcessing/sampleDict/150000/'
+f18 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-57_aijx_term_ON_Rterm_corr_OFF/postProcessing/sampleDict/150000/'
+f19 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-57_aijx_term_OFF_Rterm_corr_ON/postProcessing/sampleDict/150000/'
+
+f20 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-11_aijx_term_ON_Rterm_corr_ON/postProcessing/sampleDict/130380/'
+f21 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-11_aijx_term_ON_Rterm_corr_OFF/postProcessing/sampleDict/124901/'
+f22 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx_RijHat_PH_EVE-MO-11_aijx_term_OFF_Rterm_corr_ON/postProcessing/sampleDict/150000/'
+
+### BOR in da loop ###
+#f23  = 'run_00178/BOR/postProcessing/sampleDict/2000/'
+#f23b = 'run_00178b/BOR/postProcessing/sampleDict/2000/' # WAKE
+#f23c = 'run_00611/BOR/postProcessing/sampleDict/2000/' # STERN
+#f23d = 'run_00178/BOR/postProcessing/sampleDict/2000/' # CENTER
+#f23e = 'run_00178/BOR/postProcessing/sampleDict/2000/' # BOW
+
+f23a = 'run_01427_BOW/BOR/postProcessing/sampleDict/2000/' # BOW
+f23b = 'run_01983_CENTER/BOR/postProcessing/sampleDict/2000/' # CENTER
+f23c = 'run_00611_STERN/BOR/postProcessing/sampleDict/2000/' # STERN
+f23d = 'run_00178_WAKE/BOR/postProcessing/sampleDict/2000/' # WAKE
+f23e = 'run_00595_WAKE_U_Rwall/BOR/postProcessing/sampleDict/2000/' # WAKE U+Rwall
+
+g1 = 'run_00218_BOW_NEW/BOR/postProcessing/sampleDict/2000/'
+g2 = 'run_00360_CENTER_NEW/BOR/postProcessing/sampleDict/2000/'
+g3 = 'run_00611_STERN_NEW/BOR/postProcessing/sampleDict/2000/'
+g4 = 'run_00178_WAKE_NEW/BOR/postProcessing/sampleDict/2000/'
+
+h1 = 'run_00120_U_and_Rwall_BOW/BOR/postProcessing/sampleDict/2000/'
+h2 = 'run_00186_U_and_Rwall_BOW_ADDED_FEATURES/BOR/postProcessing/sampleDict/2000/'
+h3 = 'run_00939_U_and_Rwall_BOW_ADDED_FEATURES/BOR/postProcessing/sampleDict/2000/'
+h4 = 'run_00915_U_and_Rwall_BOW_ADDED_FEATURES/BOR/postProcessing/sampleDict/2000/'
+
+i1 = 'run_00721_U_and_Rwall_BOW_ADDED_FEATURES_Qs/BOR/postProcessing/sampleDict/2000/'
+i2 = 'run_00270_U_and_Rwall_BOW_ADDED_FEATURES_Qs/BOR/postProcessing/sampleDict/2000/'
+
+z1 = 'run_01052_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z2 = 'run_00624_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z3 = 'run_00771_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z4 = 'run_00836_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z5 = 'run_00276_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z6 = 'run_01003_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z7 = 'run_00784_1000_1000/BOR/postProcessing/sampleDict/2000/'
+z8 = 'run_01002_1000_1000/BOR/postProcessing/sampleDict/2000/'
+
+w1 = 'run_00358_RUint/BOR/postProcessing/sampleDict/2000/'
+w2 = 'run_00576_RUint/BOR/postProcessing/sampleDict/2000/'
+w3 = 'run_00602_RUint/BOR/postProcessing/sampleDict/2000/'
+w4 = 'run_00276_RUint/BOR/postProcessing/sampleDict/2000/'
+w5 = 'run_00146_RUint/BOR/postProcessing/sampleDict/2000/'
+w6 = 'run_00139_RUint/BOR/postProcessing/sampleDict/2000/'
+
+x1 = 'run_00358_URwallint/BOR/postProcessing/sampleDict/2000/'
+x2 = 'run_00477_URwallint/BOR/postProcessing/sampleDict/2000/'
+x3 = 'run_00097_URwallint/BOR/postProcessing/sampleDict/2000/'
+x4 = 'run_00087_URwallint/BOR/postProcessing/sampleDict/2000/'
+x5 = 'run_00403_URwallint/BOR/postProcessing/sampleDict/2000/'
+x6 = 'run_00440_URwallint/BOR/postProcessing/sampleDict/2000/'
+x7 = 'run_00120_URwallint/BOR/postProcessing/sampleDict/2000/'
+
+f24a = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.eve/postProcessing/sampleDict/120000/'
+f24b = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.2.eve/postProcessing/sampleDict/120000/'
+f24c = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.3.eve/postProcessing/sampleDict/120000/'
+f24d = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.4.eve/postProcessing/sampleDict/120000/'
+f24e = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.Rij_hat.squCyl.region_Ha5_newfrozenaijxRij_hat.5.eve/postProcessing/sampleDict/120000/'
+f24f = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.squCyl.region_Ha5_newfrozenaijxRij_hat.2.eve/postProcessing/sampleDict/110000/'
+f24g = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.squCyl.region_Ha5_newfrozenaijxRij_hat.3.eve/postProcessing/sampleDict/120000/'
+
+f25a = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.BFS.region.a5.newfrozenAppr_aijx_term_OFF_Rterm_corr_ON/postProcessing/sampleDict/150000/'
+f25b = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.BFS.region.a5.newfrozenAppr_aijx_term_ON_Rterm_corr_OFF/postProcessing/sampleDict/150000/'
+#f25c = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.BFS.region.a5.newfrozenAppr_aijx_term_ON_Rterm_corr_ON/postProcessing/sampleDict/150000/'
+f25d = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.R.BFS.region.a5.k_froz_omega_froz_no-limiters_/postProcessing/sampleDict/131006/'
+
+f26a = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.f.cube_aijx_term_OFF_Rterm_corr_ON/postProcessing/sampleDict/120000/'
+f26b = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.f.cube_aijx_term_ON_Rterm_corr_OFF/postProcessing/sampleDict/120000/'
+f26c = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aijx.RijHat.squCyl.region_Ha5.newfrozenAppr.f.cube_aijx_term_OFF_Rterm_corr_ON/postProcessing/sampleDict/120000/'
+
+f27 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_GEP_Tr.aij.sqcyl.SNH2020-Reg-B/postProcessing/sampleDict/150000/'
+
+f28a = 'running_pfac150_pop500_seed0_run_00653/BOR/postProcessing/sampleDict/2000/' # ALL
+
+f29 = 'SST_MediumBody_with.inlet.dat.profile.interpolated_g3_PysimpleFOAM8/postProcessing/sampleDict/30000/'
+
+### Experimental data
+exp_head = "<(sed -n '"
+exp_tail = "' ../DATA/BoR_Data/data_Oct_2021/turbStat/BoRDataCompilation_Medium.dat)"
+exp_expr = " '22, 118p' '119, 204p' '205, 285p' '286, 363p' '364, 439p' '440, 512p' '513, 582p' '583, 650p' '651, 716p' '717, 780p' '781, 842p' '843, 903p' '904, 963p' '964, 1014p' '1066, 1116p' '1168, 1218p' '1270, 1320p' '1372, 1422p' '1473, 1522p' '1571, 1618p' '1667, 1713p' '1714, 1760p' '1761, 1807p' '1808, 1854p'  '1855, 1901p' '1902, 1948p' '1949, 1995p'  '1996, 2042p' '2043, 2089p' '2090, 2136p' '2137, 2184p' '2185, 2234p' '2235, 2288p' '2289, 2347p' '2348, 2413p' '2583, 2674p' '2767, 2858p' '2951, 3042p' '3135, 3226p' '3319, 3410p' '3503, 3594p' '3687, 3778p' '3871, 3962p' "
+
+### CFD solutions from Ganbo
+cfd1_head = exp_head
+cfd1_tail = "' ../DATA/cfd_sst_exp_inlet.dat)"
+cfd1_expr = " '15, 111p' '112, 197p' '198, 278p' '279, 356p' '357, 432p' '433, 505p' '506, 575p' '576, 643p' '644, 709p' '710, 773p' '774, 835p' '836, 896p' '897, 956p' '957, 1007p' '1059, 1109p' '1161, 1211p' '1263, 1313p' '1365, 1415p' '1466, 1515p' '1564, 1611p' '1660, 1706p' '1707, 1753p' '1754, 1800p' '1801, 1847p' '1848, 1894p' '1895, 1941p' '1942, 1988p' '1989, 2035p' '2036, 2082p' '2083, 2129p' '2130, 2177p' '2178, 2227p' '2228, 2281p' '2282, 2340p' '2341, 2406p' '2576, 2667p' '2760, 2851p' '2944, 3035p' '3128, 3219p' '3312, 3403p' '3496, 3587p' '3680, 3771p' '3864, 3955p' "
+
+cfd2_head = cfd1_head
+cfd2_tail = "' ../DATA/cfd.dat)"
+cfd2_expr = cfd1_expr
+
+### RANS
+head = 'XoRp'
+tail = '_U.xy'
+xR = "'-0.1' '0.0' '0.1' '0.2' '0.3' '0.4' '0.5' '0.6' '0.7' '0.8' '0.9' '1.0' '1.1' '4.17' '4.37' '4.57' '4.77' '4.97' '5.17' '5.37' '8.67' '8.92' '9.17' '9.42' '9.67' '9.92' '10.17' '10.42' '10.67' '10.92' '11.17' '11.42' '11.67' '11.92' '12.17' '12.9167' '13.4167' '13.9167' '14.4167' '14.9167' '15.4167' '15.9167' '16.4167'"
+
+
+
+#do for  [i=1:words(xR)] {   
+#	set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+#	print f10.head.word(xR,i).tail
+#	print f11.head.word(xR,i).tail
+#	print exp_head.word(exp_expr,i).exp_tail	
+#	print cfd1_head.word(cfd1_expr,i).cfd1_tail
+#	print cfd1_head.word(cfd1_expr,i).cfd2_tail
+#	plot \
+#	f10.head.word(xR,i).tail  		u 2:1 with l ls 104 title "OF7 GEP", \
+#	f11.head.word(xR,i).tail  		u 2:1 with l ls 105 title "OF8 GEP", \
+#	exp_head.word(exp_expr,i).exp_tail 	u 4:2 with l ls 100 title "Exp.", \
+#	cfd1_head.word(cfd1_expr,i).cfd1_tail	u 4:2 with l ls 112 title "CFD1", \
+#	cfd2_head.word(cfd2_expr,i).cfd2_tail	u 4:2 with l ls 113 title "CFD2"
+#}
+#
+#plot 1/0 title "ANTRAKT"
+#
+#do for  [i=1:words(xR)] {   
+#	set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+#	print f1a.head.word(xR,i).tail
+#	print f1b.head.word(xR,i).tail
+#	print exp_head.word(exp_expr,i).exp_tail	
+#	print cfd1_head.word(cfd1_expr,i).cfd1_tail
+#	print cfd1_head.word(cfd1_expr,i).cfd2_tail
+#	plot \
+#	f1a.head.word(xR,i).tail  		u 2:1 with l ls 101 title "Baseline", \
+#	f1b.head.word(xR,i).tail  		u 2:1 with l ls 102 title "Baseline new", \
+#	exp_head.word(exp_expr,i).exp_tail 	u 4:2 with l ls 100 title "Exp.", \
+#	cfd1_head.word(cfd1_expr,i).cfd1_tail	u 4:2 with l ls 112 title "CFD1", \
+#	cfd2_head.word(cfd2_expr,i).cfd2_tail	u 4:2 with l ls 113 title "CFD2"
+#}
+#
+#plot 1/0 title "ANTRAKT"
+#
+#do for  [i=1:words(xR)] {   
+#	set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+#	print f1b.head.word(xR,i).tail
+#	print f9.head.word(xR,i).tail
+#	print exp_head.word(exp_expr,i).exp_tail	
+#	print cfd1_head.word(cfd1_expr,i).cfd1_tail
+#	print cfd1_head.word(cfd1_expr,i).cfd2_tail
+#	plot \
+#	f1b.head.word(xR,i).tail  		u 2:1 with l ls 101 title "Baseline", \
+#	f9.head.word(xR,i).tail  		u 2:1 with l ls 102 title "Wallin", \
+#	exp_head.word(exp_expr,i).exp_tail 	u 4:2 with l ls 100 title "Exp.", \
+#	cfd1_head.word(cfd1_expr,i).cfd1_tail	u 4:2 with l ls 112 title "CFD1", \
+#	cfd2_head.word(cfd2_expr,i).cfd2_tail	u 4:2 with l ls 113 title "CFD2"
+#}
+#
+#plot 1/0 title "ANTRAKT"
+
+do for  [i=1:words(xR)] {   
+	set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+	print f1b.head.word(xR,i).tail  		
+	print f13.head.word(xR,i).tail  		
+	print f14.head.word(xR,i).tail  		
+	print f15.head.word(xR,i).tail  		
+	print f16.head.word(xR,i).tail  		
+	print exp_head.word(exp_expr,i).exp_tail	
+	print cfd1_head.word(cfd1_expr,i).cfd1_tail
+	print cfd1_head.word(cfd1_expr,i).cfd2_tail
+	plot \
+	f1b.head.word(xR,i).tail  		u ($2/1.0):1 with l ls 101 title "Baseline", \
+	f13.head.word(xR,i).tail  		u ($2/2.2):1 with l ls 102 title "FlatePlate", \
+	f14.head.word(xR,i).tail  		u ($2/2.2):1 with l ls 103 title "HumpFlow", \
+	f15.head.word(xR,i).tail  		u ($2/2.2):1 with l ls 104 title "ChannelFlow", \
+	f16.head.word(xR,i).tail  		u ($2/2.2):1 with l ls 105 title "JetFlow", \
+	exp_head.word(exp_expr,i).exp_tail 	u 4:2 with l ls 100 title "Exp.", \
+	cfd1_head.word(cfd1_expr,i).cfd1_tail	u 4:2 with l ls 112 title "CFD1", \
+	cfd2_head.word(cfd2_expr,i).cfd2_tail	u 4:2 with l ls 113 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f17.head.word(xR,i).tail
+        print f18.head.word(xR,i).tail
+        print f19.head.word(xR,i).tail
+        print f20.head.word(xR,i).tail
+        print f21.head.word(xR,i).tail
+        print f22.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+        f17.head.word(xR,i).tail                u ($2/2.2):1 with l ls 102 title "PH-EVE-MO-57 ON ON", \
+        f18.head.word(xR,i).tail                u ($2/2.2):1 with l ls 103 title "PH-EVE-MO-57 ON OFF", \
+        f19.head.word(xR,i).tail                u ($2/2.2):1 with l ls 104 title "PH-EVE-MO-57 OFF ON", \
+        f20.head.word(xR,i).tail                u ($2/2.2):1 with l ls 105 title "PH-EVE-MO-11 ON ON", \
+        f21.head.word(xR,i).tail                u ($2/2.2):1 with l ls 106 title "PH-EVE-MO-11 ON OFF", \
+        f22.head.word(xR,i).tail                u ($2/2.2):1 with l ls 107 title "PH-EVE-MO-11 OFF ON", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE -- H1"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print h1.head.word(xR,i).tail
+        print h2.head.word(xR,i).tail
+        print h3.head.word(xR,i).tail
+        print h4.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        h1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run-00120 in the loop U+Rwall BOW NEW", \
+        h2.head.word(xR,i).tail                 u 2:1 with l ls 103 title "run-00186 in the loop U+Rwall BOW ADDED FEATURES", \
+        h3.head.word(xR,i).tail                 u 2:1 with l ls 104 title "run-00939 in the loop U+Rwall BOW ADDED FEATURES", \
+        h4.head.word(xR,i).tail                 u 2:1 with l ls 105 title "run-00915 in the loop U+Rwall BOW ADDED FEATURES", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f23a.head.word(xR,i).tail
+        print f23b.head.word(xR,i).tail
+        print f23c.head.word(xR,i).tail
+        print f23d.head.word(xR,i).tail
+        print f23e.head.word(xR,i).tail
+        print g1.head.word(xR,i).tail
+        print g2.head.word(xR,i).tail
+        print g3.head.word(xR,i).tail
+        print g4.head.word(xR,i).tail
+        print h1.head.word(xR,i).tail
+        print h2.head.word(xR,i).tail
+        print h3.head.word(xR,i).tail
+        print h4.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        f23a.head.word(xR,i).tail               u 2:1 with l ls 102 title "run-01427 in the loop only U BOW", \
+        f23b.head.word(xR,i).tail               u 2:1 with l ls 103 title "run-01983 in the loop only U CENTER", \
+        f23c.head.word(xR,i).tail               u 2:1 with l ls 104 title "run-00611 in the loop only U STERN", \
+        f23d.head.word(xR,i).tail               u 2:1 with l ls 105 title "run-00178 in the loop only U WAKE", \
+        f23e.head.word(xR,i).tail               u 2:1 with l ls 106 title "run-00595 in the loop U+Rwall WAKE", \
+        g1.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run-00218 in the loop U+Rwall BOW NEW", \
+        g2.head.word(xR,i).tail                 u 2:1 with l ls 108 title "run-00360 in the loop U+Rwall CENTER NEW", \
+        g3.head.word(xR,i).tail                 u 2:1 with l ls 109 title "run-00611 in the loop U+Rwall STERN NEW", \
+        g4.head.word(xR,i).tail                 u 2:1 with l ls 110 title "run-00178 in the loop U+Rwall WAKE NEW", \
+        h1.head.word(xR,i).tail                 u 2:1 with l ls 111 title "run-00120 in the loop U+Rwall BOW NEW", \
+        h2.head.word(xR,i).tail                 u 2:1 with l ls 112 title "run-00186 in the loop U+Rwall BOW ADDED FEATURES", \
+        h3.head.word(xR,i).tail                 u 2:1 with l ls 113 title "run-00939 in the loop U+Rwall BOW ADDED FEATURES", \
+        h4.head.word(xR,i).tail                 u 2:1 with l ls 114 title "run-00915 in the loop U+Rwall BOW ADDED FEATURES", \
+        i1.head.word(xR,i).tail                 u 2:1 with l ls 114 title "run-00721 in the loop U+Rwall BOW ADDED FEATURES_Qs", \
+        i2.head.word(xR,i).tail                 u 2:1 with l ls 115 title "run-00270 in the loop U+Rwall BOW ADDED FEATURES_Qs", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        i1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run-00721 in the loop U+Rwall BOW ADDED FEATURES_Qs", \
+        i2.head.word(xR,i).tail                 u 2:1 with l ls 103 title "run-00270 in the loop U+Rwall BOW ADDED FEATURES_Qs", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE -- NEW GEP IN THE LOOP RESULTS"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        g1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run-00218 in the loop U+Rwall BOW NEW", \
+        g2.head.word(xR,i).tail                 u 2:1 with l ls 103 title "run-00360 in the loop U+Rwall CENTER NEW", \
+        g3.head.word(xR,i).tail                 u 2:1 with l ls 105 title "run-00611 in the loop U+Rwall STERN NEW", \
+        g4.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run-00178 in the loop U+Rwall WAKE NEW", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 112 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f28a.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        f28a.head.word(xR,i).tail               u 2:1 with l ls 102 title "U + Rwall all points", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+set ylabel 'r/R'
+set xlabel 'U_x/U_b'
+set yrange [0:1] reverse
+set xrange [*:*]
+set grid
+#set x2label "x/R" offset 0.1
+set x2tics 
+#'14.9167' '15.4167' '15.9167' '16.4167'
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+	#set arrow from word(xR,i),0 to word(xR,i),0.1 nohead
+	#set arrow from '14.916',graph(0,0) to '14.9167',graph(1,1) nohead
+        print f1b.head.word(xR,i).tail
+        print f23e.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        f23e.head.word(xR,i).tail               u 2:1 with l ls 103 title "CFD-driven GEP", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+	"/home/unimelb.edu.au/lcampoli/UoM/Testcases/BOR/DATA/BoR_Data/data_Oct_2021/turbStat/BoRDataCompilation_Medium_Wall.dat" u 1:2 axes x2y1 with l ls 116 title "BOR" 
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f24a.head.word(xR,i).tail
+        print f24b.head.word(xR,i).tail
+        print f24c.head.word(xR,i).tail
+        print f24d.head.word(xR,i).tail
+        print f24e.head.word(xR,i).tail
+        print f24f.head.word(xR,i).tail
+        print f24g.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+        f24a.head.word(xR,i).tail               u ($2/2.2):1 with l ls 102 title "squCyl Ha5 Rij 1", \
+        f24b.head.word(xR,i).tail               u ($2/2.2):1 with l ls 103 title "squCyl Ha5 Rij 2", \
+        f24c.head.word(xR,i).tail               u ($2/2.2):1 with l ls 104 title "squCyl Ha5 Rij 3", \
+        f24d.head.word(xR,i).tail               u ($2/2.2):1 with l ls 105 title "squCyl Ha5 Rij 4", \
+        f24e.head.word(xR,i).tail               u ($2/2.2):1 with l ls 106 title "squCyl Ha5 Rij 5", \
+        f24f.head.word(xR,i).tail               u ($2/2.2):1 with l ls 107 title "squCyl Ha5 aij 2", \
+        f24g.head.word(xR,i).tail               u ($2/2.2):1 with l ls 108 title "squCyl Ha5 aij 3", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f26a.head.word(xR,i).tail
+        print f26b.head.word(xR,i).tail
+        print f26c.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+        f26a.head.word(xR,i).tail               u ($2/2.2):1 with l ls 102 title "cube aij OFF Rij ON", \
+        f26b.head.word(xR,i).tail               u ($2/2.2):1 with l ls 103 title "cube aij ON Rij OFF", \
+        f26c.head.word(xR,i).tail               u ($2/2.2):1 with l ls 104 title "cube aij ON Rij ON", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f25a.head.word(xR,i).tail
+        print f25b.head.word(xR,i).tail
+        print f25d.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+        f25a.head.word(xR,i).tail               u ($2/2.2):1 with l ls 102 title "BFS OFF ON aij", \
+        f25b.head.word(xR,i).tail               u ($2/2.2):1 with l ls 103 title "BFS ON OFF aij", \
+        f25d.head.word(xR,i).tail               u ($2/2.2):1 with l ls 104 title "BFS Rij", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f27.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+        f27.head.word(xR,i).tail                u ($2/2.2):1 with l ls 102 title "SNH2020-Reg-B", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+}
+
+#plot 1/0 title "EMPTY FIGURE"
+#
+#do for  [i=1:words(xR)] {
+#        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+#        print f1b.head.word(xR,i).tail
+#        print f29.head.word(xR,i).tail
+#        print exp_head.word(exp_expr,i).exp_tail
+#        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+#        print cfd1_head.word(cfd1_expr,i).cfd2_tail
+#        plot \
+#        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+#        f29.head.word(xR,i).tail                u ($2):1 with l ls 102 title "ML pipeline", \
+#        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+#        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 112 title "CFD1", \
+#        cfd2_head.word(cfd2_expr,i).cfd2_tail   u 4:2 with l ls 113 title "CFD2"
+#}
+
+plot 1/0 title "EMPTY FIGURE"
+
+###############
+# Best models #
+###############
+unset x2label 
+set ylabel 'y/R'
+set ylabel 'r/R'
+set xlabel 'U_x/U_b'
+set yrange [0:1] reverse
+set xrange [0.5:*]
+set grid
+set key samplen 3 spacing .95 font ",8"
+set key at graph 0.6, 0.9
+do for  [i=1:words(xR)] {
+	print word(xR,i)
+	if (word(xR,i)==-0.1) { 
+	 xmax = 1.2;
+	 xmin = 0.75;
+	 ymax = 1;
+	 ymin = 1;
+	 set yrange [0:1] reverse;
+	 set xrange [xmin:xmax];
+	} else {
+	   if (word(xR,i)==0.0) { 
+	    xmax = 1.2;
+	    xmin = 0.75;
+	    ymax = 1;
+	    ymin = 0.15;
+	    set yrange [ymin:ymax] reverse;
+	    set xrange [xmin:xmax];
+	 } else {
+	    if (word(xR,i)==0.1) { 
+	     xmax = 1.2;
+	     xmin = 0.78;
+	     ymax = 1;
+	     ymin = 0.19;
+	     set yrange [ymin:ymax] reverse;
+	     set xrange [xmin:xmax];
+	  } else {
+	     if (word(xR,i)==0.2) { 
+	      xmax = 1.2;
+	      xmin = 0.8;
+	      ymax = 1;
+	      ymin = 0.21;
+	      set yrange [ymin:ymax] reverse;
+	      set xrange [xmin:xmax];
+	   } else {
+	      if (word(xR,i)==0.3) { 
+	       xmax = 1.3;
+	       xmin = 0.8;
+	       ymax = 1;
+	       ymin = 0.225;
+	       set yrange [ymin:ymax] reverse;
+	       set xrange [xmin:xmax];
+	    } else {
+	       if (word(xR,i)==0.4) { 
+	        xmax = 1.3;
+	        xmin = 0.8;
+	        ymax = 1;
+	        ymin = 0.26;
+	        set yrange [ymin:ymax] reverse;
+	        set xrange [xmin:xmax];
+	     } else {
+	        if (word(xR,i)==0.5) { 
+	         xmax = 1.3;
+	         xmin = 0.85;
+	         ymax = 1;
+	         ymin = 0.295;
+	         set yrange [ymin:ymax] reverse;
+	         set xrange [xmin:xmax];
+	      } else {
+	         if (word(xR,i)==0.6) { 
+	          xmax = 1.3;
+	          xmin = 0.85;
+	          ymax = 1;
+	          ymin = 0.31;
+	          set yrange [ymin:ymax] reverse;
+	          set xrange [xmin:xmax];
+	       } else {
+	          if (word(xR,i)==0.7) { 
+	           xmax = 1.35;
+	           xmin = 0.9;
+	           ymax = 1;
+	           ymin = 0.35;
+	           set yrange [ymin:ymax] reverse;
+	           set xrange [xmin:xmax];
+	        } else {
+	           if (word(xR,i)==0.8) { 
+	            xmax = 1.35;
+	            xmin = 0.9;
+	            ymax = 1;
+	            ymin = 0.365;
+	            set yrange [ymin:ymax] reverse;
+	            set xrange [xmin:xmax];
+	         } else {
+	            if (word(xR,i)==0.9) { 
+	             xmax = 1.4;
+	             xmin = 0.95;
+	             ymax = 1;
+	             ymin = 0.375;
+	             set yrange [ymin:ymax] reverse;
+	             set xrange [xmin:xmax];
+	          } else {
+	             if (word(xR,i)==1.0) { 
+	              xmax = 1.4;
+	              xmin = 0.95;
+	              ymax = 1;
+	              ymin = 0.385;
+	              set yrange [ymin:ymax] reverse;
+	              set xrange [xmin:xmax];
+	           } else {
+	              if (word(xR,i)==1.1) { 
+	               xmax = 1.4;
+	               xmin = 0.95;
+	               ymax = 1;
+	               ymin = 0.395;
+	               set yrange [ymin:ymax] reverse;
+	               set xrange [xmin:xmax];
+	            } else {
+	              if (word(xR,i)==4.17 || word(xR,i)==4.37 || word(xR,i)==4.57 || word(xR,i)==4.77 || word(xR,i)==4.97 || word(xR,i)==5.17 || word(xR,i)==5.37) { 
+	               xmax = 1.5;
+	               xmin = 0.95;
+	               ymax = 1;
+	               ymin = 0.5;
+	               set yrange [ymin:ymax] reverse;
+	               set xrange [xmin:xmax];
+	            } else {
+	               if (word(xR,i)==8.67 || word(xR,i)==8.92 || word(xR,i)==9.17 || word(xR,i)==9.42 || word(xR,i)==9.67 || word(xR,i)==9.92 || word(xR,i)==10.17 || word(xR,i)==10.42 || word(xR,i)==10.67 || word(xR,i)==10.92 || word(xR,i)==11.17) { 
+	                xmax = 1.5;
+	                xmin = 1.0;
+	                ymax = 1;
+	                ymin = 0.5;
+	                set yrange [ymin:ymax] reverse;
+	                set xrange [xmin:xmax];
+	             } else {
+	                if (word(xR,i)==11.42 || word(xR,i)==11.67) { 
+	                 xmax = 1.4;
+	                 xmin = 1.0;
+	                 ymax = 1;
+	                 ymin = 0.5;
+	                 set yrange [ymin:ymax] reverse;
+	                 set xrange [xmin:xmax];
+	              } else {
+	                 if (word(xR,i)==11.92 || word(xR,i)==12.17) { 
+			  set key samplen 3 spacing .95 font ",8"
+			  set key at graph 0.6, 0.9
+	                  xmax = 1.35;
+	                  xmin = 1.0;
+	                  ymax = 1;
+	                  ymin = 0.5;
+	                  set yrange [ymin:ymax] reverse;
+	                  set xrange [xmin:xmax];
+	               } else {
+			  set key samplen 3 spacing .95 font ",8"
+			  set key at graph 0.01, 0.85
+	                  set yrange [0:1] reverse;
+	                  set xrange [*:*];
+		      }
+		     }
+		    }
+		   }
+		   }
+		  }
+		 }
+		}
+	       }
+	     }
+	    }
+	   }
+	  }
+         }
+        }
+       }
+       }
+
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f16.head.word(xR,i).tail
+        print f21.head.word(xR,i).tail
+        print f22.head.word(xR,i).tail
+        print f24g.head.word(xR,i).tail
+        print f25d.head.word(xR,i).tail
+        print f26b.head.word(xR,i).tail
+        print f27.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        plot \
+        f1b.head.word(xR,i).tail              u ($2/1.0):1 with l ls 101 title "Baseline", \
+	f16.head.word(xR,i).tail  	      u ($2/2.2):1 with l ls 102 title "JetFlow", \
+        f21.head.word(xR,i).tail              u ($2/2.2):1 with l ls 103 title "PH-EVE-MO-11 aij ON Rij OFF", \
+        f25d.head.word(xR,i).tail             u ($2/2.2):1 with l ls 104 title "BFS Rij", \
+        f26b.head.word(xR,i).tail             u ($2/2.2):1 with l ls 114 title "cube aij ON Rij OFF", \
+        f27.head.word(xR,i).tail              u ($2/2.2):1 with l ls 115 title "SNH2020-Reg-B", \
+        exp_head.word(exp_expr,i).exp_tail    u 4:2        with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail u 4:2        with l ls 112 title "CFD1"
+}
+	#f5a.head.word(xR,i).tail  		u ($2):1     with l ls 107 title "GEP Chirtrav Lav", \
+        #f24g.head.word(xR,i).tail               u ($2/2.2):1 with l ls 107 title "squCyl Ha5 aij 3", \
+        #f22.head.word(xR,i).tail                u ($2/2.2):1 with l ls 104 title "PH-EVE-MO-11 OFF ON", \
+
+plot 1/0 title "EMPTY FIGURE"
+ 
+###############
+# Best models #
+###############
+set ylabel 'r/R'
+set xlabel 'U_x/U_b'
+set yrange [0:1] reverse
+set xrange [0.5:*]
+set grid
+
+unset x2tics
+#unset x2tics nomirror
+#set autoscale xfix
+#set autoscale x2fix
+
+set key samplen 3 spacing 1.15 font ",12"
+set key at graph 0.8, 0.95
+
+do for  [i=1:words(xR)] {
+	print word(xR,i)
+	if (word(xR,i)==-0.1) { 
+	 xmax = 1.2;
+	 xmin = 0.75;
+	 ymax = 1;
+	 ymin = 1;
+	 set yrange [0:1] reverse;
+	 set xrange [xmin:xmax];
+	} else {
+	   if (word(xR,i)==0.0) { 
+	    xmax = 1.2;
+	    xmin = 0.75;
+	    ymax = 1;
+	    ymin = 0.15;
+	    set yrange [ymin:ymax] reverse;
+	    set xrange [xmin:xmax];
+	 } else {
+	    if (word(xR,i)==0.1) { 
+	     xmax = 1.2;
+	     xmin = 0.78;
+	     ymax = 1;
+	     ymin = 0.19;
+	     set yrange [ymin:ymax] reverse;
+	     set xrange [xmin:xmax];
+	  } else {
+	     if (word(xR,i)==0.2) { 
+	      xmax = 1.2;
+	      xmin = 0.8;
+	      ymax = 1;
+	      ymin = 0.21;
+	      set yrange [ymin:ymax] reverse;
+	      set xrange [xmin:xmax];
+	   } else {
+	      if (word(xR,i)==0.3) { 
+	       xmax = 1.3;
+	       xmin = 0.8;
+	       ymax = 1;
+	       ymin = 0.225;
+	       set yrange [ymin:ymax] reverse;
+	       set xrange [xmin:xmax];
+	    } else {
+	       if (word(xR,i)==0.4) { 
+	        xmax = 1.3;
+	        xmin = 0.8;
+	        ymax = 1;
+	        ymin = 0.26;
+	        set yrange [ymin:ymax] reverse;
+	        set xrange [xmin:xmax];
+	     } else {
+	        if (word(xR,i)==0.5) { 
+	         xmax = 1.3;
+	         xmin = 0.85;
+	         ymax = 1;
+	         ymin = 0.295;
+	         set yrange [ymin:ymax] reverse;
+	         set xrange [xmin:xmax];
+	      } else {
+	         if (word(xR,i)==0.6) { 
+	          xmax = 1.3;
+	          xmin = 0.85;
+	          ymax = 1;
+	          ymin = 0.31;
+	          set yrange [ymin:ymax] reverse;
+	          set xrange [xmin:xmax];
+	       } else {
+	          if (word(xR,i)==0.7) { 
+	           xmax = 1.35;
+	           xmin = 0.9;
+	           ymax = 1;
+	           ymin = 0.35;
+	           set yrange [ymin:ymax] reverse;
+	           set xrange [xmin:xmax];
+	        } else {
+	           if (word(xR,i)==0.8) { 
+	            xmax = 1.35;
+	            xmin = 0.9;
+	            ymax = 1;
+	            ymin = 0.365;
+	            set yrange [ymin:ymax] reverse;
+	            set xrange [xmin:xmax];
+	         } else {
+	            if (word(xR,i)==0.9) { 
+	             xmax = 1.4;
+	             xmin = 0.95;
+	             ymax = 1;
+	             ymin = 0.375;
+	             set yrange [ymin:ymax] reverse;
+	             set xrange [xmin:xmax];
+	          } else {
+	             if (word(xR,i)==1.0) { 
+	              xmax = 1.4;
+	              xmin = 0.95;
+	              ymax = 1;
+	              ymin = 0.385;
+	              set yrange [ymin:ymax] reverse;
+	              set xrange [xmin:xmax];
+	           } else {
+	              if (word(xR,i)==1.1) { 
+	               xmax = 1.4;
+	               xmin = 0.95;
+	               ymax = 1;
+	               ymin = 0.395;
+	               set yrange [ymin:ymax] reverse;
+	               set xrange [xmin:xmax];
+	            } else {
+	              if (word(xR,i)==4.17 || word(xR,i)==4.37 || word(xR,i)==4.57 || word(xR,i)==4.77 || word(xR,i)==4.97 || word(xR,i)==5.17 || word(xR,i)==5.37) { 
+	               xmax = 1.5;
+	               xmin = 0.95;
+	               ymax = 1;
+	               ymin = 0.5;
+	               set yrange [ymin:ymax] reverse;
+	               set xrange [xmin:xmax];
+	            } else {
+	               if (word(xR,i)==8.67 || word(xR,i)==8.92 || word(xR,i)==9.17 || word(xR,i)==9.42 || word(xR,i)==9.67 || word(xR,i)==9.92 || word(xR,i)==10.17 || word(xR,i)==10.42 || word(xR,i)==10.67 || word(xR,i)==10.92 || word(xR,i)==11.17) { 
+	                xmax = 1.5;
+	                xmin = 1.0;
+	                ymax = 1;
+	                ymin = 0.5;
+	                set yrange [ymin:ymax] reverse;
+	                set xrange [xmin:xmax];
+	             } else {
+	                if (word(xR,i)==11.42 || word(xR,i)==11.67) { 
+	                 xmax = 1.4;
+	                 xmin = 1.0;
+	                 ymax = 1;
+	                 ymin = 0.5;
+	                 set yrange [ymin:ymax] reverse;
+	                 set xrange [xmin:xmax];
+	              } else {
+	                 if (word(xR,i)==11.92 || word(xR,i)==12.17) { 
+			  #set key samplen 3 spacing .95 font ",8"
+			  #set key at graph 0.6, 0.9
+	                  xmax = 1.35;
+	                  xmin = 1.0;
+	                  ymax = 1;
+	                  ymin = 0.5;
+	                  set yrange [ymin:ymax] reverse;
+	                  set xrange [xmin:xmax];
+	               } else {
+	                  xmax = 1.4;
+	                  xmin = 1.0;
+	                  ymax = 1;
+	                  ymin = 0.5;
+	                  #set yrange [ymin:ymax] reverse;
+	                  #set xrange [xmin:xmax];
+			  #set key samplen 3 spacing .95 font ",8"
+			  #set key at graph 0.01, 0.85
+	                  set yrange [0:1] reverse;
+	                  set xrange [*:xmax];
+		      }
+		     }
+		    }
+		   }
+		   }
+		  }
+		 }
+		}
+	       }
+	     }
+	    }
+	   }
+	  }
+         }
+        }
+       }
+       }
+
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print f16.head.word(xR,i).tail
+        print f21.head.word(xR,i).tail
+        print f22.head.word(xR,i).tail
+        print f24g.head.word(xR,i).tail
+        print f25d.head.word(xR,i).tail
+        print f26b.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        print cfd1_head.word(cfd1_expr,i).cfd1_tail
+        plot \
+        f1b.head.word(xR,i).tail                u ($2/1.0):1 with l ls 101 title "Baseline", \
+	f16.head.word(xR,i).tail  		u ($2/2.2):1 with l ls 102 title "JetFlow", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+        cfd1_head.word(cfd1_expr,i).cfd1_tail   u 4:2 with l ls 103 title "CFD"
+}
+        #f21.head.word(xR,i).tail                u ($2/2.2):1 with l ls 103 title "PH-EVE-MO-11 aij ON Rij OFF", \
+        #f25d.head.word(xR,i).tail               u ($2/2.2):1 with l ls 104 title "BFS Rij", \
+        #f26b.head.word(xR,i).tail               u ($2/2.2):1 with l ls 114 title "cube aij ON Rij OFF", \
+	"/home/unimelb.edu.au/lcampoli/UoM/Testcases/BOR/DATA/BoR_Data/data_Oct_2021/turbStat/BoRDataCompilation_Medium_Wall.dat" u 1:2 axes x2y1 with l ls 116 notitle 
+
+plot 1/0 title "EMPTY FIGURE"
+plot 1/0 title "EMPTY FIGURE"
+
+set ylabel 'r/R' offset 2
+#set ylabel 'y/R' 
+set xlabel 'U_x/U_b
+set yrange [0:1] reverse
+set xrange [*:*]
+set grid
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        print f1b.head.word(xR,i).tail
+        print exp_head.word(exp_expr,i).exp_tail
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        z1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run01052-1000-1000", \
+        z3.head.word(xR,i).tail                 u 2:1 with l ls 104 title "run00771-1000-1000", \
+        z5.head.word(xR,i).tail                 u 2:1 with l ls 106 title "run00276-1000-1000", \
+        z6.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run01003-1000-1000", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+set ylabel 'r/R' offset 2
+#set ylabel 'y/R' 
+set xlabel 'U_x/U_b
+set yrange [0:1] reverse
+set xrange [*:*]
+set grid
+set key top left
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        w1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run00358-RUint", \
+        w2.head.word(xR,i).tail                 u 2:1 with l ls 103 title "run00576-RUint", \
+        w3.head.word(xR,i).tail                 u 2:1 with l ls 104 title "run00602-RUint", \
+        w4.head.word(xR,i).tail                 u 2:1 with l ls 105 title "run00276-RUint", \
+        w5.head.word(xR,i).tail                 u 2:1 with l ls 106 title "run00146-RUint", \
+        w6.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run00139-RUint", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+
+plot 1/0 title "EMPTY FIGURE"
+
+set ylabel 'r/R' offset 2
+#set ylabel 'y/R' 
+set xlabel 'U_x/U_b
+set yrange [0:1] reverse
+set xrange [*:*]
+set grid
+set key top left
+do for  [i=1:words(xR)] {
+        set title 'Axial mean velocity for MEDIUM body at x/R='.word(xR, i)
+        plot \
+        f1b.head.word(xR,i).tail                u 2:1 with l ls 101 title "Baseline", \
+        x1.head.word(xR,i).tail                 u 2:1 with l ls 102 title "run00358-URwallint", \
+        x2.head.word(xR,i).tail                 u 2:1 with l ls 103 title "run00477-URwallintr", \
+        x3.head.word(xR,i).tail                 u 2:1 with l ls 104 title "run00097-URwallintr", \
+        x6.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run00440-URwallintr", \
+        x7.head.word(xR,i).tail                 u 2:1 with l ls 107 title "run00120-URwallintr", \
+        exp_head.word(exp_expr,i).exp_tail      u 4:2 with l ls 100 title "Exp.", \
+}
+        #x4.head.word(xR,i).tail                 u 2:1 with l ls 105 title "run00087-URwallintr", \
+        #x5.head.word(xR,i).tail                 u 2:1 with l ls 106 title "run00403-URwallintr", \
+ 
+	q
+
